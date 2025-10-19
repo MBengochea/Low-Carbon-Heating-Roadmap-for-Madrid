@@ -86,7 +86,7 @@ source ./venv/bin/activate.csh
 If you're a Windows user type:
 
 ```bash
-.\venv\Scripts\activate
+.venv\Scripts\activate
 ```
 
 5. **Install dependencies**:
