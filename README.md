@@ -47,16 +47,16 @@ project
 git clone https://github.com/MBengochea/Low-Carbon-Heating-Roadmap-for-Madrid.git
 cd madrid-heating-decarbonization
 
-# 2a. Mac / Linux (bash, zsh, etc.)
+### 2a. Mac / Linux (bash, zsh, etc.)
 python3 -m venv venv
 source venv/bin/activate
-# 2b. Windows PowerShell: create & activate venv
+### 2b. Windows PowerShell: create & activate venv
 py -m venv venv
 .\venv\Scripts\Activate.ps1
-# 2c. Windows CMD
+### 2c. Windows CMD
 py -m venv venv
 venv\Scripts\activate.bat
-# Anaconda Prompt (Windows or macOS/Linux)
+### Anaconda Prompt (Windows or macOS/Linux)
 python -m venv .venv
 \.venv\Scripts\activate
 
