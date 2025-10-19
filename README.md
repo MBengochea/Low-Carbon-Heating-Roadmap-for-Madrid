@@ -16,7 +16,7 @@ Quantitative roadmap & technology portfolio for decarbonizing Madrid’s heating
 
 ## Repo Structure
 
-```text
+```
 project
 │   README.md           # overview & instructions
 │   requirements.txt    # dependency list
@@ -39,24 +39,30 @@ project
 └── reports             # stakeholder deliverables
     ├ executive_summary.pdf
     └ presentation_slides.pptx
-´´´
+```
 ## Quick Start
 
 
+1. Clone the repo
 git clone https://github.com/your-username/madrid-heating-decarbonization.git
 cd madrid-heating-decarbonization
 
+2. Set up environment
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 
+3. Ingest data
 python data_ingest/fetch_footfall.py
 python data_ingest/fetch_climate.py
 
+4. Run models
 python models/architecture_scoring.py
 python models/portfolio_selection.py
 
-streamlit run dashboards/stream
+5. Launch dashboard
+streamlit run dashboards/streamlit_app.py
+
 
 ## Key Deliverables
 
