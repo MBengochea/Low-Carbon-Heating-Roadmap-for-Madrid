@@ -39,10 +39,10 @@ project
 └── reports             # stakeholder deliverables
     ├ executive_summary.pdf
     └ presentation_slides.pptx
-
+´´´
 ## Quick Start
 
-```bash
+
 git clone https://github.com/your-username/madrid-heating-decarbonization.git
 cd madrid-heating-decarbonization
 
@@ -57,7 +57,7 @@ python models/architecture_scoring.py
 python models/portfolio_selection.py
 
 streamlit run dashboards/stream
-´´´
+
 ## Key Deliverables
 
 - Quantitative Figures of Merit for seven system architectures  
@@ -66,12 +66,12 @@ streamlit run dashboards/stream
 - Streamlit dashboard for real-time pilot insights  
 - Executive summary & stakeholder slide deck
 
-```markdown
+
 ## Data Sources
 
 - Madrid Open Data: climate, footfall, energy  
 - [Add additional public APIs here]
-´´´
+
 ## License
 
 All rights reserved. No license granted.
