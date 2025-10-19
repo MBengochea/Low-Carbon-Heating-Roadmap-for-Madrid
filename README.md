@@ -39,7 +39,7 @@ project
 └── reports             # stakeholder deliverables
     ├ executive_summary.pdf
     └ presentation_slides.pptx
-´´´
+
 ## Quick Start
 
 ```bash
