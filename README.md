@@ -43,13 +43,13 @@ project
 ---
 ## Quick Start
 
-1. **Clone the repository**:
+1. **Clone the repository w/ terminal**:
 
 ```bash
 git clone https://github.com/MBengochea/Low-Carbon-Heating-Roadmap-for-Madrid.git
 ```
 
-2. **Install UV**
+2. **Install UV if you dont have it**
 
 If you're a MacOS/Linux user type:
 
@@ -63,7 +63,7 @@ If you're a Windows user open an Anaconda Powershell Prompt and type :
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
-3. **Create an environment**
+3. **If you have UV, create an environment**
 
 ```bash
 uv venv 
