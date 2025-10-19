@@ -97,11 +97,13 @@ uv pip install -r requirements.txt
 6. **Ingest data**:
    
 python data_ingest/fetch_footfall.py
+
 python data_ingest/fetch_climate.py
 
 7. **Run models**:
    
 python models/architecture_scoring.py
+
 python models/portfolio_selection.py
 
 8. **Launch dashboard**:
