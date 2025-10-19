@@ -1,0 +1,5 @@
+{
+  "footfall":   "https://datos.madrid.es/egob/catalogo/400108-0-camaras-aforo.json",
+  "climate":    "https://opendata.aemet.es/opendata/api/observacion/convencional/datos/?api_key=YOUR_TOKEN",
+  "energy":     "https://datos.madrid.es/egob/catalogo/300833-0-consumo-energetico-residencial.csv"
+}
