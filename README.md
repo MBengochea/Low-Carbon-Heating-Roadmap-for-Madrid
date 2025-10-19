@@ -43,35 +43,66 @@ project
 ---
 ## Quick Start
 
-1. Clone the repo
+1. **Clone the repository**:
+
+```bash
 git clone https://github.com/MBengochea/Low-Carbon-Heating-Roadmap-for-Madrid.git
-cd madrid-heating-decarbonization
+```
 
-2a. Mac / Linux (bash, zsh, etc.)
-python3 -m venv venv
-source venv/bin/activate
-2b. Windows PowerShell: create & activate venv
-py -m venv venv
-.\venv\Scripts\Activate.ps1
-2c. Windows CMD
-py -m venv venv
-venv\Scripts\activate.bat
-Anaconda Prompt (Windows or macOS/Linux)
-python -m venv .venv
-\.venv\Scripts\activate
+2. **Install UV**
 
-3. Install dependencies
-pip install -r requirements.txt
+If you're a MacOS/Linux user type:
 
-4. Ingest data
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+If you're a Windows user open an Anaconda Powershell Prompt and type :
+
+```bash
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+3. **Create an environment**
+
+```bash
+uv venv 
+```
+
+4. **Activate the environment**
+
+If you're a MacOS/Linux user type (if you're using a bash shell):
+
+```bash
+source ./venv/bin/activate
+```
+
+If you're a MacOS/Linux user type (if you're using a csh/tcsh shell):
+
+```bash
+source ./venv/bin/activate.csh
+```
+
+If you're a Windows user type:
+
+```bash
+.\venv\Scripts\activate
+```
+
+5. **Install dependencies**:
+
+```bash
+uv pip install -r requirements.txt
+```
+6. Ingest data
 python data_ingest/fetch_footfall.py
 python data_ingest/fetch_climate.py
 
-5. Run models
+7. Run models
 python models/architecture_scoring.py
 python models/portfolio_selection.py
 
-6. Launch dashboard
+8. Launch dashboard
 streamlit run dashboards/streamlit_app.py
 
 ---
