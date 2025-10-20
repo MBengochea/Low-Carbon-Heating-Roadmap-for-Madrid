@@ -1,0 +1,355 @@
+año;municipio_codigo;municipio_nombre;entidad_codigo;entidad_nombre;fecha_festivo
+2025;002;Ajalvir;00;Ajalvir;2025-02-03
+2025;002;Ajalvir;00;Ajalvir;2025-05-15
+2025;003;Alameda del Valle;00;Alameda del Valle;2025-07-18
+2025;003;Alameda del Valle;00;Alameda del Valle;2025-07-26
+2025;005;Alcalá de Henares;00;Alcalá de Henares;2025-08-06
+2025;005;Alcalá de Henares;00;Alcalá de Henares;2025-10-09
+2025;006;Alcobendas;00;Alcobendas;2025-01-24
+2025;006;Alcobendas;00;Alcobendas;2025-05-15
+2025;007;Alcorcón;00;Alcorcón;2025-04-21
+2025;007;Alcorcón;00;Alcorcón;2025-09-08
+2025;008;Aldea del Fresno;00;Aldea del Fresno;2025-01-17
+2025;008;Aldea del Fresno;00;Aldea del Fresno;2025-06-27
+2025;009;Algete;00;Algete;2025-09-12
+2025;009;Algete;00;Algete;2025-09-15
+2025;010;Alpedrete;00;Alpedrete;2025-05-22
+2025;010;Alpedrete;00;Alpedrete;2025-05-23
+2025;011;Ambite;00;Ambite;2025-02-03
+2025;011;Ambite;00;Ambite;2025-04-30
+2025;012;Anchuelo;00;Anchuelo;2025-04-29
+2025;012;Anchuelo;00;Anchuelo;2025-04-30
+2025;013;Aranjuez;00;Aranjuez;2025-05-30
+2025;013;Aranjuez;00;Aranjuez;2025-09-05
+2025;014;Arganda del Rey;00;Arganda del Rey;2025-09-12
+2025;014;Arganda del Rey;00;Arganda del Rey;2025-09-15
+2025;015;Arroyomolinos;00;Arroyomolinos;2025-06-19
+2025;015;Arroyomolinos;00;Arroyomolinos;2025-06-20
+2025;017;Batres;00;Batres;2025-02-10
+2025;017;Batres;00;Batres;2025-09-01
+2025;018;Becerril de la Sierra;00;Becerril de la Sierra;2025-08-18
+2025;018;Becerril de la Sierra;00;Becerril de la Sierra;2025-09-15
+2025;020;Berzosa del Lozoya;00;Berzosa del Lozoya;2025-08-16
+2025;020;Berzosa del Lozoya;00;Berzosa del Lozoya;2025-12-05
+2025;022;Boadilla del Monte;00;Boadilla del Monte;2025-05-26
+2025;022;Boadilla del Monte;00;Boadilla del Monte;2025-10-06
+2025;024;Braojos;00;Braojos;2025-01-22
+2025;024;Braojos;00;Braojos;2025-09-08
+2025;025;Brea de Tajo;00;Brea de Tajo;2025-10-06
+2025;025;Brea de Tajo;00;Brea de Tajo;2025-10-07
+2025;026;Brunete;00;Brunete;2025-05-15
+2025;026;Brunete;00;Brunete;2025-09-12
+2025;027;Buitrago del Lozoya;00;Buitrago del Lozoya;2025-08-14
+2025;027;Buitrago del Lozoya;00;Buitrago del Lozoya;2025-09-15
+2025;028;Bustarviejo;00;Bustarviejo;2025-05-15
+2025;028;Bustarviejo;00;Bustarviejo;2025-09-15
+2025;031;Cadalso de los Vidrios;00;Cadalso de los Vidrios;2025-04-21
+2025;031;Cadalso de los Vidrios;00;Cadalso de los Vidrios;2025-09-15
+2025;032;Camarma de Esteruelas;00;Camarma de Esteruelas;2025-09-04
+2025;032;Camarma de Esteruelas;00;Camarma de Esteruelas;2025-09-05
+2025;033;Campo Real;00;Campo Real;2025-05-15
+2025;033;Campo Real;00;Campo Real;2025-09-15
+2025;034;Canencia;00;Canencia;2025-04-21
+2025;034;Canencia;00;Canencia;2025-10-13
+2025;035;Carabaña;00;Carabaña;2025-09-15
+2025;035;Carabaña;00;Carabaña;2025-12-12
+2025;036;Casarrubuelos;00;Casarrubuelos;2025-04-30
+2025;036;Casarrubuelos;00;Casarrubuelos;2025-07-24
+2025;037;Cenicientos;00;Cenicientos;2025-08-14
+2025;037;Cenicientos;00;Cenicientos;2025-12-26
+2025;038;Cercedilla;00;Cercedilla;2025-01-20
+2025;038;Cercedilla;00;Cercedilla;2025-09-08
+2025;039;Cervera de Buitrago;00;Cervera de Buitrago;2025-07-28
+2025;039;Cervera de Buitrago;00;Cervera de Buitrago;2025-12-22
+2025;051;Chapinería;00;Chapinería;2025-03-03
+2025;051;Chapinería;00;Chapinería;2025-10-06
+2025;052;Chinchón;00;Chinchón;2025-08-13
+2025;052;Chinchón;00;Chinchón;2025-08-14
+2025;040;Ciempozuelos;00;Ciempozuelos;2025-09-15
+2025;040;Ciempozuelos;00;Ciempozuelos;2025-09-16
+2025;041;Cobeña;00;Cobeña;2025-05-05
+2025;041;Cobeña;00;Cobeña;2025-10-03
+2025;046;Collado Mediano;00;Collado Mediano;2025-01-23
+2025;046;Collado Mediano;00;Collado Mediano;2025-01-24
+2025;047;Collado Villalba;00;Collado Villalba;2025-06-13
+2025;047;Collado Villalba;00;Collado Villalba;2025-07-24
+2025;043;Colmenar de Oreja;00;Colmenar de Oreja;2025-04-30
+2025;043;Colmenar de Oreja;00;Colmenar de Oreja;2025-09-12
+2025;042;Colmenar del Arroyo;00;Colmenar del Arroyo;2025-01-22
+2025;042;Colmenar del Arroyo;00;Colmenar del Arroyo;2025-09-12
+2025;045;Colmenar Viejo;00;Colmenar Viejo;2025-09-01
+2025;045;Colmenar Viejo;00;Colmenar Viejo;2025-09-02
+2025;044;Colmenarejo;00;Colmenarejo;2025-05-15
+2025;044;Colmenarejo;00;Colmenarejo;2025-11-10
+2025;048;Corpa;00;Corpa;2025-05-15
+2025;048;Corpa;00;Corpa;2025-09-15
+2025;049;Coslada;00;Coslada;2025-05-15
+2025;049;Coslada;00;Coslada;2025-06-09
+2025;050;Cubas de la Sagra;00;Cubas de la Sagra;2025-02-03
+2025;050;Cubas de la Sagra;00;Cubas de la Sagra;2025-09-15
+2025;053;Daganzo de Arriba;00;Daganzo de Arriba;2025-06-13
+2025;053;Daganzo de Arriba;00;Daganzo de Arriba;2025-09-01
+2025;004;El Álamo;00;El Álamo;2025-05-15
+2025;004;El Álamo;00;El Álamo;2025-09-02
+2025;016;El Atazar;00;El Atazar;2025-05-05
+2025;016;El Atazar;00;El Atazar;2025-11-25
+2025;021;El Berrueco;00;El Berrueco;2025-05-12
+2025;021;El Berrueco;00;El Berrueco;2025-05-13
+2025;023;El Boalo;02;Cerceda;2025-05-03
+2025;023;El Boalo;02;Cerceda;2025-09-15
+2025;023;El Boalo;00;El Boalo;2025-01-20
+2025;023;El Boalo;00;El Boalo;2025-05-15
+2025;023;El Boalo;03;Mataelpino;2025-02-05
+2025;023;El Boalo;03;Mataelpino;2025-08-25
+2025;054;El Escorial;00;El Escorial;2025-06-11
+2025;054;El Escorial;00;El Escorial;2025-09-08
+2025;086;El Molar;00;El Molar;2025-05-29
+2025;086;El Molar;00;El Molar;2025-05-30
+2025;168;El Vellón;01;El Espartal;2025-03-19
+2025;168;El Vellón;01;El Espartal;2025-10-13
+2025;168;El Vellón;00;El Vellón;2025-10-03
+2025;168;El Vellón;00;El Vellón;2025-10-06
+2025;055;Estremera;00;Estremera;2025-10-13
+2025;055;Estremera;00;Estremera;2025-10-14
+2025;056;Fresnedillas de la Oliva;00;Fresnedillas de la Oliva;2025-01-20
+2025;056;Fresnedillas de la Oliva;00;Fresnedillas de la Oliva;2025-08-25
+2025;057;Fresno de Torote;00;Fresno de Torote;2025-02-28
+2025;057;Fresno de Torote;00;Fresno de Torote;2025-08-18
+2025;058;Fuenlabrada;00;Fuenlabrada;2025-09-15
+2025;058;Fuenlabrada;00;Fuenlabrada;2025-12-26
+2025;059;Fuente el Saz de Jarama;00;Fuente el Saz de Jarama;2025-09-06
+2025;059;Fuente el Saz de Jarama;00;Fuente el Saz de Jarama;2025-09-09
+2025;060;Fuentidueña de Tajo;00;Fuentidueña de Tajo;2025-09-15
+2025;060;Fuentidueña de Tajo;00;Fuentidueña de Tajo;2025-09-16
+2025;061;Galapagar;00;Galapagar;2025-05-15
+2025;061;Galapagar;00;Galapagar;2025-09-15
+2025;062;Garganta de los Montes;00;Garganta de los Montes;2025-05-15
+2025;062;Garganta de los Montes;00;Garganta de los Montes;2025-10-06
+2025;063;Gargantilla del Lozoya y Pinilla de Buitrago;00;Gargantilla del Lozoya y Pinilla de Buitrago;2025-03-21
+2025;063;Gargantilla del Lozoya y Pinilla de Buitrago;00;Gargantilla del Lozoya y Pinilla de Buitrago;2025-08-25
+2025;064;Gascones;00;Gascones;2025-08-04
+2025;064;Gascones;00;Gascones;2025-10-06
+2025;065;Getafe;00;Getafe;2025-05-29
+2025;065;Getafe;00;Getafe;2025-06-09
+2025;066;Griñón;00;Griñón;2025-06-17
+2025;066;Griñón;00;Griñón;2025-08-14
+2025;067;Guadalix de la Sierra;00;Guadalix de la Sierra;2025-05-15
+2025;067;Guadalix de la Sierra;00;Guadalix de la Sierra;2025-09-08
+2025;068;Guadarrama;00;Guadarrama;2025-09-29
+2025;068;Guadarrama;00;Guadarrama;2025-10-04
+2025;070;Horcajo de la Sierra-Aoslos;00;Horcajo de la Sierra-Aoslos;2025-05-15
+2025;070;Horcajo de la Sierra-Aoslos;00;Horcajo de la Sierra-Aoslos;2025-08-18
+2025;071;Horcajuelo de la Sierra;00;Horcajuelo de la Sierra;2025-06-13
+2025;071;Horcajuelo de la Sierra;00;Horcajuelo de la Sierra;2025-12-05
+2025;072;Hoyo de Manzanares;00;Hoyo de Manzanares;2025-09-05
+2025;072;Hoyo de Manzanares;00;Hoyo de Manzanares;2025-09-08
+2025;073;Humanes de Madrid;00;Humanes de Madrid;2025-08-08
+2025;073;Humanes de Madrid;00;Humanes de Madrid;2025-09-22
+2025;001;La Acebeda;00;La Acebeda;2025-01-20
+2025;001;La Acebeda;00;La Acebeda;2025-09-29
+2025;030;La Cabrera;00;La Cabrera;2025-06-13
+2025;030;La Cabrera;00;La Cabrera;2025-10-17
+2025;138;La Serna del Monte;00;La Serna del Monte;2025-08-28
+2025;138;La Serna del Monte;00;La Serna del Monte;2025-08-29
+2025;127;Las Rozas de Madrid;00;Las Rozas de Madrid;2025-05-05
+2025;127;Las Rozas de Madrid;00;Las Rozas de Madrid;2025-09-29
+2025;074;Leganés;00;Leganés;2025-08-14
+2025;074;Leganés;00;Leganés;2025-10-10
+2025;075;Loeches;00;Loeches;2025-09-11
+2025;075;Loeches;00;Loeches;2025-09-12
+2025;087;Los Molinos;00;Los Molinos;2025-01-20
+2025;087;Los Molinos;00;Los Molinos;2025-09-12
+2025;137;Los Santos de la Humosa;00;Los Santos de la Humosa;2025-05-15
+2025;137;Los Santos de la Humosa;00;Los Santos de la Humosa;2025-09-08
+2025;076;Lozoya;00;Lozoya;2025-08-06
+2025;076;Lozoya;00;Lozoya;2025-10-07
+2025;901;Lozoyuela-Navas-Sieteiglesias;00;Lozoyuela-Navas-Sieteiglesias;2025-09-22
+2025;901;Lozoyuela-Navas-Sieteiglesias;00;Lozoyuela-Navas-Sieteiglesias;2025-12-05
+2025;078;Madarcos;00;Madarcos;2025-03-03
+2025;078;Madarcos;00;Madarcos;2025-07-28
+2025;079;Madrid;00;Madrid;2025-05-15
+2025;079;Madrid;00;Madrid;2025-11-10
+2025;080;Majadahonda;00;Majadahonda;2025-09-14
+2025;080;Majadahonda;00;Majadahonda;2025-11-25
+2025;082;Manzanares el Real;00;Manzanares el Real;2025-06-09
+2025;082;Manzanares el Real;00;Manzanares el Real;2025-09-15
+2025;083;Meco;00;Meco;2025-09-11
+2025;083;Meco;00;Meco;2025-09-12
+2025;084;Mejorada del Campo;00;Mejorada del Campo;2025-09-22
+2025;084;Mejorada del Campo;00;Mejorada del Campo;2025-09-23
+2025;085;Miraflores de la Sierra;00;Miraflores de la Sierra;2025-02-03
+2025;085;Miraflores de la Sierra;00;Miraflores de la Sierra;2025-05-15
+2025;089;Moraleja de Enmedio;00;Moraleja de Enmedio;2025-09-08
+2025;089;Moraleja de Enmedio;00;Moraleja de Enmedio;2025-09-09
+2025;090;Moralzarzal;00;Moralzarzal;2025-09-18
+2025;090;Moralzarzal;00;Moralzarzal;2025-09-19
+2025;091;Morata de Tajuña;00;Morata de Tajuña;2025-05-15
+2025;091;Morata de Tajuña;00;Morata de Tajuña;2025-09-08
+2025;092;Móstoles;00;Móstoles;2025-05-15
+2025;092;Móstoles;00;Móstoles;2025-09-12
+2025;093;Navacerrada;00;Navacerrada;2025-06-13
+2025;093;Navacerrada;00;Navacerrada;2025-09-08
+2025;094;Navalafuente;00;Navalafuente;2025-02-03
+2025;094;Navalafuente;00;Navalafuente;2025-08-25
+2025;095;Navalagamella;00;Navalagamella;2025-05-08
+2025;095;Navalagamella;00;Navalagamella;2025-09-15
+2025;096;Navalcarnero;00;Navalcarnero;2025-05-15
+2025;096;Navalcarnero;00;Navalcarnero;2025-09-08
+2025;097;Navarredonda y San Mamés;00;Navarredonda y San Mamés;2025-08-18
+2025;097;Navarredonda y San Mamés;00;Navarredonda y San Mamés;2025-09-29
+2025;099;Navas del Rey;00;Navas del Rey;2025-09-08
+2025;099;Navas del Rey;00;Navas del Rey;2025-09-09
+2025;100;Nuevo Baztán;00;Nuevo Baztán;2025-05-05
+2025;100;Nuevo Baztán;00;Nuevo Baztán;2025-12-03
+2025;101;Olmeda de las Fuentes;00;Olmeda de las Fuentes;2025-04-21
+2025;101;Olmeda de las Fuentes;00;Olmeda de las Fuentes;2025-08-25
+2025;102;Orusco de Tajuña;00;Orusco de Tajuña;2025-09-15
+2025;102;Orusco de Tajuña;00;Orusco de Tajuña;2025-12-29
+2025;104;Paracuellos de Jarama;00;Paracuellos de Jarama;2025-06-09
+2025;104;Paracuellos de Jarama;00;Paracuellos de Jarama;2025-06-10
+2025;106;Parla;00;Parla;2025-06-23
+2025;106;Parla;00;Parla;2025-09-15
+2025;108;Pedrezuela;00;Pedrezuela;2025-09-29
+2025;108;Pedrezuela;00;Pedrezuela;2025-09-30
+2025;109;Pelayos de la Presa;00;Pelayos de la Presa;2025-02-03
+2025;109;Pelayos de la Presa;00;Pelayos de la Presa;2025-08-14
+2025;110;Perales de Tajuña;00;Perales de Tajuña;2025-02-03
+2025;110;Perales de Tajuña;00;Perales de Tajuña;2025-05-15
+2025;111;Pezuela de las Torres;00;Pezuela de las Torres;2025-05-05
+2025;111;Pezuela de las Torres;00;Pezuela de las Torres;2025-09-15
+2025;112;Pinilla del Valle;00;Pinilla del Valle;2025-09-29
+2025;112;Pinilla del Valle;00;Pinilla del Valle;2025-09-30
+2025;113;Pinto;00;Pinto;2025-03-19
+2025;113;Pinto;00;Pinto;2025-05-15
+2025;114;Piñuécar-Gandullas;00;Piñuécar-Gandullas;2025-01-24
+2025;114;Piñuécar-Gandullas;00;Piñuécar-Gandullas;2025-10-07
+2025;115;Pozuelo de Alarcón;00;Pozuelo de Alarcón;2025-07-16
+2025;115;Pozuelo de Alarcón;00;Pozuelo de Alarcón;2025-09-08
+2025;116;Pozuelo del Rey;00;Pozuelo del Rey;2025-05-15
+2025;116;Pozuelo del Rey;00;Pozuelo del Rey;2025-09-29
+2025;117;Prádena del Rincón;00;Prádena del Rincón;2025-07-16
+2025;117;Prádena del Rincón;00;Prádena del Rincón;2025-10-10
+2025;118;Puebla de la Sierra;00;Puebla de la Sierra;2025-04-25
+2025;118;Puebla de la Sierra;00;Puebla de la Sierra;2025-05-15
+2025;902;Puentes Viejas;00;Puentes Viejas;2025-07-07
+2025;902;Puentes Viejas;00;Puentes Viejas;2025-08-14
+2025;119;Quijorna;00;Quijorna;2025-05-15
+2025;119;Quijorna;00;Quijorna;2025-12-26
+2025;120;Rascafría;00;Rascafría;2025-08-16
+2025;120;Rascafría;00;Rascafría;2025-12-01
+2025;121;Redueña;00;Redueña;2025-09-15
+2025;121;Redueña;00;Redueña;2025-12-12
+2025;122;Ribatejada;00;Ribatejada;2025-05-30
+2025;122;Ribatejada;00;Ribatejada;2025-08-29
+2025;123;Rivas-Vaciamadrid;00;Rivas-Vaciamadrid;2025-05-15
+2025;123;Rivas-Vaciamadrid;00;Rivas-Vaciamadrid;2025-05-16
+2025;124;Robledillo de la Jara;00;Robledillo de la Jara;2025-08-11
+2025;124;Robledillo de la Jara;00;Robledillo de la Jara;2025-10-06
+2025;125;Robledo de Chavela;00;Robledo de Chavela;2025-08-21
+2025;125;Robledo de Chavela;00;Robledo de Chavela;2025-08-25
+2025;126;Robregordo;00;Robregordo;2025-08-14
+2025;126;Robregordo;00;Robregordo;2025-08-18
+2025;128;Rozas de Puerto Real;00;Rozas de Puerto Real;2025-02-05
+2025;128;Rozas de Puerto Real;00;Rozas de Puerto Real;2025-06-24
+2025;129;San Agustín del Guadalix;00;San Agustín del Guadalix;2025-09-19
+2025;129;San Agustín del Guadalix;00;San Agustín del Guadalix;2025-09-22
+2025;130;San Fernando de Henares;00;San Fernando de Henares;2025-05-29
+2025;130;San Fernando de Henares;00;San Fernando de Henares;2025-05-30
+2025;131;San Lorenzo de El Escorial;00;San Lorenzo de El Escorial;2025-08-11
+2025;131;San Lorenzo de El Escorial;00;San Lorenzo de El Escorial;2025-09-15
+2025;132;San Martín de la Vega;00;San Martín de la Vega;2025-04-25
+2025;132;San Martín de la Vega;00;San Martín de la Vega;2025-04-28
+2025;133;San Martín de Valdeiglesias;00;San Martín de Valdeiglesias;2025-09-08
+2025;133;San Martín de Valdeiglesias;00;San Martín de Valdeiglesias;2025-11-11
+2025;134;San Sebastián de los Reyes;00;San Sebastián de los Reyes;2025-01-20
+2025;134;San Sebastián de los Reyes;00;San Sebastián de los Reyes;2025-08-28
+2025;135;Santa María de la Alameda;00;Santa María de la Alameda;2025-05-15
+2025;135;Santa María de la Alameda;00;Santa María de la Alameda;2025-09-08
+2025;136;Santorcaz;00;Santorcaz;2025-05-15
+2025;136;Santorcaz;00;Santorcaz;2025-09-15
+2025;140;Serranillos del Valle;00;Serranillos del Valle;2025-08-18
+2025;140;Serranillos del Valle;00;Serranillos del Valle;2025-09-03
+2025;141;Sevilla la Nueva;00;Sevilla la Nueva;2025-05-15
+2025;141;Sevilla la Nueva;00;Sevilla la Nueva;2025-09-15
+2025;143;Somosierra;00;Somosierra;2025-08-01
+2025;143;Somosierra;00;Somosierra;2025-08-04
+2025;144;Soto del Real;00;Soto del Real;2025-08-04
+2025;144;Soto del Real;00;Soto del Real;2025-10-07
+2025;146;Tielmes;00;Tielmes;2025-05-15
+2025;146;Tielmes;00;Tielmes;2025-08-06
+2025;147;Titulcia;00;Titulcia;2025-09-01
+2025;147;Titulcia;00;Titulcia;2025-09-02
+2025;148;Torrejón de Ardoz;00;Torrejón de Ardoz;2025-06-23
+2025;148;Torrejón de Ardoz;00;Torrejón de Ardoz;2025-06-24
+2025;149;Torrejón de la Calzada;00;Torrejón de la Calzada;2025-01-20
+2025;149;Torrejón de la Calzada;00;Torrejón de la Calzada;2025-09-08
+2025;150;Torrejón de Velasco;00;Torrejón de Velasco;2025-05-15
+2025;150;Torrejón de Velasco;00;Torrejón de Velasco;2025-10-10
+2025;151;Torrelaguna;00;Torrelaguna;2025-09-01
+2025;151;Torrelaguna;00;Torrelaguna;2025-09-02
+2025;152;Torrelodones;00;Torrelodones;2025-07-16
+2025;152;Torrelodones;00;Torrelodones;2025-08-14
+2025;153;Torremocha de Jarama;00;Torremocha de Jarama;2025-05-15
+2025;153;Torremocha de Jarama;00;Torremocha de Jarama;2025-05-16
+2025;154;Torres de la Alameda;00;Torres de la Alameda;2025-10-06
+2025;154;Torres de la Alameda;00;Torres de la Alameda;2025-10-07
+2025;903;Tres Cantos;00;Tres Cantos;2025-03-21
+2025;903;Tres Cantos;00;Tres Cantos;2025-06-24
+2025;155;Valdaracete;00;Valdaracete;2025-05-05
+2025;155;Valdaracete;00;Valdaracete;2025-09-15
+2025;156;Valdeavero;00;Valdeavero;2025-05-15
+2025;156;Valdeavero;00;Valdeavero;2025-09-12
+2025;157;Valdelaguna;00;Valdelaguna;2025-04-28
+2025;157;Valdelaguna;00;Valdelaguna;2025-07-16
+2025;158;Valdemanco;00;Valdemanco;2025-07-16
+2025;158;Valdemanco;00;Valdemanco;2025-08-16
+2025;159;Valdemaqueda;00;Valdemaqueda;2025-03-05
+2025;159;Valdemaqueda;00;Valdemaqueda;2025-08-18
+2025;160;Valdemorillo;00;Valdemorillo;2025-02-03
+2025;160;Valdemorillo;00;Valdemorillo;2025-09-08
+2025;161;Valdemoro;00;Valdemoro;2025-05-05
+2025;161;Valdemoro;00;Valdemoro;2025-09-08
+2025;162;Valdeolmos-Alalpardo;01;Alalpardo;2025-05-15
+2025;162;Valdeolmos-Alalpardo;01;Alalpardo;2025-08-25
+2025;162;Valdeolmos-Alalpardo;00;Valdeolmos-Alalpardo;2025-05-15
+2025;162;Valdeolmos-Alalpardo;00;Valdeolmos-Alalpardo;2025-08-11
+2025;163;Valdepiélagos;00;Valdepiélagos;2025-05-15
+2025;163;Valdepiélagos;00;Valdepiélagos;2025-05-16
+2025;164;Valdetorres de Jarama;00;Valdetorres de Jarama;2025-05-05
+2025;164;Valdetorres de Jarama;00;Valdetorres de Jarama;2025-09-15
+2025;165;Valdilecha;00;Valdilecha;2025-09-08
+2025;165;Valdilecha;00;Valdilecha;2025-11-11
+2025;166;Valverde de Alcalá;00;Valverde de Alcalá;2025-05-15
+2025;166;Valverde de Alcalá;00;Valverde de Alcalá;2025-09-05
+2025;167;Velilla de San Antonio;00;Velilla de San Antonio;2025-09-29
+2025;167;Velilla de San Antonio;00;Velilla de San Antonio;2025-09-30
+2025;169;Venturada;00;Venturada;2025-05-15
+2025;169;Venturada;00;Venturada;2025-06-24
+2025;171;Villa del Prado;00;Villa del Prado;2025-04-21
+2025;171;Villa del Prado;00;Villa del Prado;2025-09-08
+2025;170;Villaconejos;00;Villaconejos;2025-05-05
+2025;170;Villaconejos;00;Villaconejos;2025-05-15
+2025;172;Villalbilla;00;Villalbilla;2025-09-25
+2025;172;Villalbilla;00;Villalbilla;2025-09-26
+2025;173;Villamanrique de Tajo;00;Villamanrique de Tajo;2025-04-25
+2025;173;Villamanrique de Tajo;00;Villamanrique de Tajo;2025-09-12
+2025;174;Villamanta;00;Villamanta;2025-01-31
+2025;174;Villamanta;00;Villamanta;2025-05-23
+2025;175;Villamantilla;00;Villamantilla;2025-09-29
+2025;175;Villamantilla;00;Villamantilla;2025-12-30
+2025;176;Villanueva de la Cañada;00;Villanueva de la Cañada;2025-05-15
+2025;176;Villanueva de la Cañada;00;Villanueva de la Cañada;2025-07-28
+2025;178;Villanueva de Perales;00;Villanueva de Perales;2025-05-05
+2025;178;Villanueva de Perales;00;Villanueva de Perales;2025-12-09
+2025;177;Villanueva del Pardillo;00;Villanueva del Pardillo;2025-10-16
+2025;177;Villanueva del Pardillo;00;Villanueva del Pardillo;2025-10-17
+2025;179;Villar del Olmo;00;Villar del Olmo;2025-05-15
+2025;179;Villar del Olmo;00;Villar del Olmo;2025-09-22
+2025;180;Villarejo de Salvanés;00;Villarejo de Salvanés;2025-09-01
+2025;180;Villarejo de Salvanés;00;Villarejo de Salvanés;2025-10-07
+2025;181;Villaviciosa de Odón;00;Villaviciosa de Odón;2025-01-20
+2025;181;Villaviciosa de Odón;00;Villaviciosa de Odón;2025-09-22
+2025;182;Villavieja del Lozoya;00;Villavieja del Lozoya;2025-08-25
+2025;182;Villavieja del Lozoya;00;Villavieja del Lozoya;2025-12-05
+2025;183;Zarzalejo;00;Zarzalejo;2025-06-30
+2025;183;Zarzalejo;00;Zarzalejo;2025-09-08
