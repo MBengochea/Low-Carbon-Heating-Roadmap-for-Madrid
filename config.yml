@@ -1,0 +1,13 @@
+paths:
+  raw_data: data/raw/
+  spatial_data: data/spatial/
+  notebooks: notebooks/
+  figures: figures/
+  dashboard: dashboard/
+  scripts: src/
+  sql_scripts: sql/
+
+defaults:
+  encoding: latin1
+  separator: ";"
+  shapefile_crs: EPSG:4326
