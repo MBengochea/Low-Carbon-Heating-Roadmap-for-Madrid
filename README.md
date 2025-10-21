@@ -7,7 +7,7 @@ Design a data-driven roadmap to accelerate the adoption of low-carbon heating sy
 Specific Objectives:
 1. Diagnose emissions hotspots Quantify residential heating emissions across Madrid using public datasets, and apply Pareto analysis to identify the top 20% zones responsible for 80% of emissions. Prioritize areas based on emissions intensity and socio-economic vulnerability.
 
-2. Simulate low-carbon adoption Model rollout scenarios for heat pumps and district heating using predictive analytics and stochastic optimization, inspired by Toyota Production System and Six Sigma principles.
+2. Simulate low-carbon adoption Model rollout scenarios for: heat pumps, district heating, gas boilers, and biomass boilers using predictive analytics and stochastic optimization, inspired by Toyota Production System and Six Sigma principles.
 
 3. Visualize impact and tradeoffs Build an interactive dashboard (Streamlit + Tableau) to map emissions hotspots, simulate technology adoption, and present cost-benefit outcomes in € and % emissions gap closed by 2030 — for policymakers and citizens.
 
