@@ -1,7 +1,7 @@
 # Low-Carbon Heating Roadmap for Madrid
 
 General Objective:
-```bash
+```
 Design a data-driven roadmap to accelerate the adoption of low-carbon heating systems in Madrid, optimizing environmental impact, cost-efficiency, and urban integration using reproducible analytics and operational methodologies. Using only Madrid’s open data and public APIs.
 ```
 Specific Objectives:
