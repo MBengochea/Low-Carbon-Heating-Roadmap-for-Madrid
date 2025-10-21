@@ -145,10 +145,10 @@ uv pip install -r requirements.txt
    🔗 https://geoportal.madrid.es/IDEAM_WBGEOPORTAL/descargasDisponibles.iam?fileIdent=aebec21d-5cad-11f0-9f8c-9009dfd270e9  
    Provides official district boundaries.  
    → Essential for spatial joins and mapping emissions, heating demand, and retrofit scenarios by district.
-
+<!--
 9. **3D Building Models – Geoportal Madrid**  
    🔗 https://geoportal.madrid.es/IDEAM_WBGEOPORTAL/dataset.iam?id=ece2d15a-d16f-46e8-aaec-9576771b9997  
    High-resolution 3D geometry grouped by district.  
    → Use to visualize top 20% emission districts in 3D and overlay thematic data like retrofit cost or emissions gap closure.
-
+-->
 ---
