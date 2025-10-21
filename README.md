@@ -183,4 +183,13 @@ uv pip install -r requirements.txt
    High-resolution 3D geometry grouped by district.  
    → Use to visualize top 20% emission districts in 3D and overlay thematic data like retrofit cost or emissions gap closure.
 -->
+10. **Heating Technology Specs – Spain (IDAE, Eurostat, JRC, REE)**  
+    `data/tech_specs/heating_technologies.csv`  
+    Contains real-world cost, efficiency, and emissions data for four key heating technologies in Spain: air-source heat pumps, district heating, gas boilers, and biomass boilers.  
+    → Used for scenario modeling, cost-benefit analysis, and emissions gap closure simulations.  
+    Sources include:
+    - [IDAE Heat Pump Methodology](https://www.idae.es/sites/default/files/estudios_informes_y_estadisticas/Metodologia_IDAE_reporte_ahorros_art-8_DEE_Bombas_de_calor.pdf)
+    - [Euroheat DHC Market Outlook](https://www.euroheat.org/data-insights/outlooks/dhc-market-outlook-2025)
+    - [Eurostat Energy Balances – Spain](https://ec.europa.eu/eurostat/web/energy/data/energy-balances)
+    - [REE National Statistical Series](https://www.ree.es/en/datos/publications/national-statistical-series)
 ---
