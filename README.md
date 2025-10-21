@@ -1,6 +1,6 @@
 # Low-Carbon Heating Roadmap for Madrid
 
-Develop a Quantitative Roadmap and Technology Portfolio to guide Madrid’s transition from fossil-fuel heating to low-carbon systems. Using only Madrid’s open data and public APIs
+General Objective: Design a data-driven roadmap to accelerate the adoption of low-carbon heating systems in Madrid, optimizing environmental impact, cost-efficiency, and urban integration using reproducible analytics and operational methodologies. Using only Madrid’s open data and public APIs.
 
 ---
 
