@@ -26,28 +26,21 @@ Specific Objectives:
 ## Repo Structure
 
 ```
-project
-│   README.md           # overview & instructions
-│   requirements.txt    # dependency list
-│
-├── data_ingest         # fetch & stage raw data
-│   ├ fetch_footfall.py
-│   └ fetch_climate.py
-│
-├── calculations        # analysis notebooks
-│   ├ figures_of_merit.ipynb
-│   └ trade_space_analysis.ipynb
-│
-├── models              # scoring & portfolio scripts
-│   ├ architecture_scoring.py
-│   └ portfolio_selection.py
-│
-├── dashboards          # Streamlit app
-│   └ streamlit_app.py
-│
-└── reports             # stakeholder deliverables
-    ├ executive_summary.pdf
-    └ presentation_slides.pptx
+├── .gitignore
+├── README.md
+├── config.yml
+├── dashboard/
+│   └── streamlit_app.py
+├── figures/
+│   └── idae_madrid_heatmap.png
+├── notebooks/
+│   └── 01_load_datasets.ipynb
+├── requirements.txt
+├── sql/
+│   ├── create_database.sql
+│   └── query_database.sql
+└── src/
+    └── __init__.py
 ```
 ---
 ## Quick Start
