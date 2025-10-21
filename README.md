@@ -102,7 +102,7 @@ uv pip install -r requirements.txt
 1. **Greenhouse Gas Emissions Inventory – Comunidad de Madrid**  
    🔗 https://datos.comunidad.madrid/dataset/atm_inventario_gei  
    Provides sectoral emissions data across the region since 1990.  
-   → Use to identify high-emission zones and quantify heating-related emissions for Pareto prioritization.
+   → Use to identify high-emission zones and quantify heating-related emissions for Pareto.
 
 2. **Emissions by Sector – Particulate Matter (PST)**  
    🔗 https://datos.comunidad.madrid/dataset/1911600  
@@ -112,7 +112,7 @@ uv pip install -r requirements.txt
 3. **Energy Efficiency Certificates – Buildings**  
    🔗 https://datos.comunidad.madrid/catalogo/dataset/registro_certificados_eficiencia_energetica  
    Contains energy ratings for buildings.  
-   → Filter by “Madrid” and join with district shapefiles to estimate heating demand and retrofit potential.
+   → Filter by “Madrid” and join with district shapefiles to estimate heating demand.
 
 4. **Final Gas Consumption by Sector**  
    🔗 https://datos.comunidad.madrid/dataset/950a60f0-498c-48db-84f4-734990d3e253  
@@ -140,7 +140,7 @@ uv pip install -r requirements.txt
    → Essential for spatial joins and mapping emissions, heating demand, and retrofit scenarios by district.
 <!--
 9. **3D Building Models – Geoportal Madrid**  
-   🔗 https://geoportal.madrid.es/IDEAM_WBGEOPORTAL/dataset.iam?id=ece2d15a-d16f-46e8-aaec-9576771b9997  
+   🔗 https://geoportal.madrid.es/IDEAM_WBGEOPORTAL/dataset.iam?id=ece2d15a-d16f-46e8-aaec-9576771b9997
    High-resolution 3D geometry grouped by district.  
    → Use to visualize top 20% emission districts in 3D and overlay thematic data like retrofit cost or emissions gap closure.
 -->
