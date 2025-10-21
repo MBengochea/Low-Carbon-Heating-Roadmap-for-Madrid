@@ -105,52 +105,50 @@ uv pip install -r requirements.txt
 ```
 ---
 ## **Data Sources**
-  1_gei:
-    title: Inventario Gases de Efecto Invernadero
-    source: https://datos.comunidad.madrid/api/3/action/package_show?id=atm_inventario_gei
-    format: CSV
-    path: data/raw/gei.csv
 
-  2_pst:
-    title: Emisión de contaminantes atmosféricos por sectores: PST
-    source: https://datos.comunidad.madrid/api/3/action/package_show?id=1911600
-    format: CSV
-    path: data/raw/pst.csv
+1. **Greenhouse Gas Emissions Inventory – Comunidad de Madrid**  
+   🔗 https://datos.comunidad.madrid/dataset/atm_inventario_gei  
+   Provides sectoral emissions data across the region since 1990.  
+   → Use to identify high-emission zones and quantify heating-related emissions for Pareto prioritization.
 
-  3_ceee:
-    title: Registro de Certificados de Eficiencia Energética
-    source: https://datos.comunidad.madrid/api/3/action/package_show?id=registro_certificados_eficiencia_energetica
-    format: CSV
-    path: data/raw/ceee.csv
+2. **Emissions by Sector – Particulate Matter (PST)**  
+   🔗 https://datos.comunidad.madrid/dataset/1911600  
+   Breaks down emissions by activity and pollutant type.  
+   → Supports air quality validation and helps correlate heating sources with pollution hotspots.
 
-  4_gas:
-    title: Consumo final de gas natural por sectores
-    source: https://datos.comunidad.madrid/api/3/action/package_show?id=950a60f0-498c-48db-84f4-734990d3e253
-    format: CSV
-    path: data/raw/gas.csv
+3. **Energy Efficiency Certificates – Buildings**  
+   🔗 https://datos.comunidad.madrid/catalogo/dataset/registro_certificados_eficiencia_energetica  
+   Contains energy ratings for buildings.  
+   → Filter by “Madrid” and join with district shapefiles to estimate heating demand and retrofit potential.
 
-  5_air_quality:
-    title: Calidad del Aire en Tiempo Real
-    source: https://ciudadesabiertas.madrid.es/dynamicAPI/API/query/calair_tiemporeal.json?pageSize=5000
-    format: JSON
-    path: data/raw/air_quality.json
+4. **Final Gas Consumption by Sector**  
+   🔗 https://datos.comunidad.madrid/dataset/950a60f0-498c-48db-84f4-734990d3e253  
+   Shows fossil fuel usage by sector.  
+   → Use to estimate current heating fuel dependency and model transition scenarios to low-carbon alternatives.
 
-  6_zbe:
-    title: Cámaras ZBE + Zona Interior M30
-    source: https://datos.madrid.es/egob/catalogo/300234-0-zbe-interior-m30.zip
-    format: ZIP (CSV + SHP)
-    path: data/spatial/zbe_zone.zip
+5. **Real-Time Air Quality – Madrid**  
+   🔗 https://ciudadesabiertas.madrid.es/dynamicAPI/API/query/calair_tiemporeal.json?pageSize=5000  
+   Live pollution data by station.  
+   → Use to validate the impact of heating interventions on air quality and correlate with emissions zones.
 
-  7_zbedep:
-    title: ZBEDEP Centro
-    source: https://datos.madrid.es/egob/catalogo/300234-0-zbedep-centro.zip
-    format: ZIP (CSV + SHP)
-    path: data/spatial/zbedep_zone.zip
+6. **Low Emission Zone Cameras – Madrid ZBE**  
+   🔗 https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=1e4991bfd349b810VgnVCM1000001d4a900aRCRD  
+   Geolocated camera data and zone boundaries.  
+   → Useful for mapping enforcement zones and aligning heating upgrades with air quality policies.
 
-  8_districts:
-    title: Distritos Madrid
-    source: https://geoportal.madrid.es/IDEAM_WBGEOPORTAL/descargas/IDEAM/Cartografia/Unidad_Administrativa/Distritos/Distritos_Madrid.zip
-    format: ZIP (SHP)
-    path: data/spatial/distritos_madrid.zip
+7. **Special Low Emission Zones – ZBEDEP Centro**  
+   🔗 https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=019f24aaef3d3610VgnVCM1000001d4a900aRCRD  
+   Shapefiles for protected zones.  
+   → Use to overlay retrofit priorities and visualize policy-aligned intervention areas.
+
+8. **District-Level Shapefiles – Geoportal Madrid**  
+   🔗 https://geoportal.madrid.es/IDEAM_WBGEOPORTAL/descargasDisponibles.iam?fileIdent=aebec21d-5cad-11f0-9f8c-9009dfd270e9  
+   Provides official district boundaries.  
+   → Essential for spatial joins and mapping emissions, heating demand, and retrofit scenarios by district.
+
+9. **3D Building Models – Geoportal Madrid**  
+   🔗 https://geoportal.madrid.es/IDEAM_WBGEOPORTAL/dataset.iam?id=ece2d15a-d16f-46e8-aaec-9576771b9997  
+   High-resolution 3D geometry grouped by district.  
+   → Use to visualize top 20% emission districts in 3D and overlay thematic data like retrofit cost or emissions gap closure.
 
 ---
