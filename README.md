@@ -103,36 +103,54 @@ If you're a Windows user type:
 ```bash
 uv pip install -r requirements.txt
 ```
-6. **Ingest data**:
-   
-python data_ingest/fetch_footfall.py
-
-python data_ingest/fetch_climate.py
-
-7. **Run models**:
-   
-python models/architecture_scoring.py
-
-python models/portfolio_selection.py
-
-8. **Launch dashboard**:
-    
-streamlit run dashboards/streamlit_app.py
-
----
-## Key Deliverables
-
-- Quantitative Figures of Merit for seven system architectures  
-- Tradespace charts (cost vs performance vs risk)  
-- Optimized €500 M five-year investment roadmap  
-- Streamlit dashboard for real-time pilot insights  
-- Executive summary & stakeholder slide deck
 ---
 ## Data Sources
+  1_gei:
+    title: Inventario Gases de Efecto Invernadero
+    source: https://datos.comunidad.madrid/api/3/action/package_show?id=atm_inventario_gei
+    format: CSV
+    path: data/raw/gei.csv
 
-- Madrid Open Data: climate, footfall, energy  
-- [Add additional public APIs here]
+  2_pst:
+    title: Emisión de contaminantes atmosféricos por sectores: PST
+    source: https://datos.comunidad.madrid/api/3/action/package_show?id=1911600
+    format: CSV
+    path: data/raw/pst.csv
+
+  3_ceee:
+    title: Registro de Certificados de Eficiencia Energética
+    source: https://datos.comunidad.madrid/api/3/action/package_show?id=registro_certificados_eficiencia_energetica
+    format: CSV
+    path: data/raw/ceee.csv
+
+  4_gas:
+    title: Consumo final de gas natural por sectores
+    source: https://datos.comunidad.madrid/api/3/action/package_show?id=950a60f0-498c-48db-84f4-734990d3e253
+    format: CSV
+    path: data/raw/gas.csv
+
+  5_air_quality:
+    title: Calidad del Aire en Tiempo Real
+    source: https://ciudadesabiertas.madrid.es/dynamicAPI/API/query/calair_tiemporeal.json?pageSize=5000
+    format: JSON
+    path: data/raw/air_quality.json
+
+  6_zbe:
+    title: Cámaras ZBE + Zona Interior M30
+    source: https://datos.madrid.es/egob/catalogo/300234-0-zbe-interior-m30.zip
+    format: ZIP (CSV + SHP)
+    path: data/spatial/zbe_zone.zip
+
+  7_zbedep:
+    title: ZBEDEP Centro
+    source: https://datos.madrid.es/egob/catalogo/300234-0-zbedep-centro.zip
+    format: ZIP (CSV + SHP)
+    path: data/spatial/zbedep_zone.zip
+
+  8_districts:
+    title: Distritos Madrid
+    source: https://geoportal.madrid.es/IDEAM_WBGEOPORTAL/descargas/IDEAM/Cartografia/Unidad_Administrativa/Distritos/Distritos_Madrid.zip
+    format: ZIP (SHP)
+    path: data/spatial/distritos_madrid.zip
+
 ---
-## License
-
-All rights reserved. No license granted.
