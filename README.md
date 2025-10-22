@@ -10,16 +10,13 @@ Specific Objectives:
 2. Model technology adoption: Forecast adoption trends for heat pumps, district heating, gas boilers, and biomass boilers using predictive analytics and stochastic optimization — inspired by Toyota Production System and Six Sigma principles.
 
 3. Build an interactive dashboard: Develop a Streamlit + Tableau dashboard to visualize emissions hotspots, simulate technology rollout, and present cost-benefit tradeoffs in € and % of emissions gap closed by 2030 — tailored for policymakers, citizens, and retrofit planners.
-
 ---
 
 ## Table of Contents
 
 1. [Repo Structure](#repo-structure)  
 2. [Quick Start](#quick-start)  
-3. [Key Deliverables](#key-deliverables)  
-4. [Data Sources](#data-sources)  
-5. [License](#license)
+3. [Data Sources](#data-sources)  
 
 ---
 
