@@ -124,6 +124,7 @@ Provides sectoral greenhouse gas emissions data across the region from 1990 onwa
 Useful for identifying high-emission zones and quantifying heating-related emissions for Pareto analysis.
 
 - Shape: `(5885, 6)`
+```
 | Column name                     | Type    | Description                                                                 |
 |--------------------------------|---------|-----------------------------------------------------------------------------|
 | `inventario_gei_año`           | int     | Inventory year                                                              |
@@ -132,7 +133,7 @@ Useful for identifying high-emission zones and quantifying heating-related emiss
 | `inventario_gei_actividad_crf` | object  | Specific activity emitting the pollutant                                   |
 | `inventario_gei_contaminante`  | object  | Greenhouse gas type (CO₂, CH₄, N₂O, SF₆, HFCs, PFCs)                        |
 | `inventario_gei_gg_co2_eq`     | float   | Emissions in CO₂ equivalent (Gg CO₂-eq), converted from comma decimals      |
-
+´´´
 > CRF (Common Reporting Format) is a standardized emissions classification system defined by the UNFCCC  
 > to ensure consistent reporting of greenhouse gas emissions by sector, category, and activity.
 
