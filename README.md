@@ -37,38 +37,17 @@ Specific Objectives:
 │   │   └── zbe_lpr.csv
 │   └── spatial/
 │       ├── Madrid_Central/              
-│       │   ├── Madrid_Central.dbf
-│       │   ├── Madrid_Central.prj
-│       │   ├── Madrid_Central.qpj
 │       │   ├── Madrid_Central.shp
 │       │   └── Madrid_Central.shx
 │       ├── PANEL_HOGARES/
-│       │   ├── PANEL_HOGARES.cpg
-│       │   ├── PANEL_HOGARES.dbf
-│       │   ├── PANEL_HOGARES.prj
-│       │   ├── PANEL_HOGARES.sbn
-│       │   ├── PANEL_HOGARES.sbx
 │       │   ├── PANEL_HOGARES.shp
-│       │   ├── PANEL_HOGARES.shp.xml
 │       │   └── PANEL_HOGARES.shx
 │       └── ZBE_MADRID/
-│           ├── ZBE_MADRID_CAMARAS.cpg
-│           ├── ZBE_MADRID_CAMARAS.dbf
-│           ├── ZBE_MADRID_CAMARAS.prj
 │           ├── ZBE_MADRID_CAMARAS.shp
 │           ├── ZBE_MADRID_CAMARAS.shx
-│           ├── ZBE_MADRID_FOTO_ROJOS.cpg
-│           ├── ZBE_MADRID_FOTO_ROJOS.dbf
-│           ├── ZBE_MADRID_FOTO_ROJOS.prj
 │           ├── ZBE_MADRID_FOTO_ROJOS.shp
 │           ├── ZBE_MADRID_FOTO_ROJOS.shx
-│           ├── ZBE_TM.cpg
-│           ├── ZBE_TM.dbf
-│           ├── ZBE_TM.prj
-│           ├── ZBE_TM.sbn
-│           ├── ZBE_TM.sbx
 │           ├── ZBE_TM.shp
-│           ├── ZBE_TM.shp.xml
 │           └── ZBE_TM.shx
 ├── figures/
 │   └── idae_madrid_heatmap.png
