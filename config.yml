@@ -1,13 +1,21 @@
-paths:
-  raw_data: data/raw/
-  spatial_data: data/spatial/
-  notebooks: notebooks/
-  figures: figures/
-  dashboard: dashboard/
-  scripts: src/
-  sql_scripts: sql/
-
 defaults:
   encoding: latin1
-  separator: ";"
+  separator: ;
   shapefile_crs: EPSG:4326
+paths:
+  dashboard: dashboard/
+  figures: figures/
+  notebooks: notebooks/
+  raw_data: data/raw/
+  scripts: src/
+  spatial_data: data/spatial/
+  sql_scripts: sql/
+provenance:
+- file: camaras_mc_clean.csv
+  rows: 115
+- file: zbe_lpr_clean.csv
+  rows: 465
+- file: camaras_mc_clean.csv
+  rows: 115
+- file: zbe_lpr_clean.csv
+  rows: 465
