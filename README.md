@@ -185,6 +185,7 @@ Contains real-world cost, efficiency, and emissions data for four key heating te
 → Used for scenario modeling, cost-benefit analysis, and emissions gap closure simulations.  
 <img src="figures/heating_technologies_diagram.png" alt="specs" width="450"/>
 (done with python schemdraw>=0.15)
+
 Sources include:
 - [IDAE Air-Source Heat Pump Methodology Spain](https://www.idae.es/sites/default/files/estudios_informes_y_estadisticas/Metodologia_IDAE_reporte_ahorros_art-8_DEE_Bombas_de_calor.pdf)
 - [Euroheat District Heating Market Outlook 2025](https://www.euroheat.org/data-insights/outlooks/dhc-market-outlook-2025)
