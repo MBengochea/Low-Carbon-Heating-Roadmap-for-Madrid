@@ -1,5 +1,9 @@
-![Project Logo](figures/ayunta.madrid.png)
-# Low-Carbon Heating Roadmap for Madrid
+<table>
+  <tr>
+    <td><img src="figures/ayunta.madrid.png" alt="Madrid Logo" width="60"/></td>
+    <td><h1>Low-Carbon Heating Roadmap for Madrid</h1></td>
+  </tr>
+</table>
 
 General Objective:
 ---
