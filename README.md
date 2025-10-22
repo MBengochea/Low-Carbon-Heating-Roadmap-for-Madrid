@@ -119,41 +119,54 @@ uv pip install -r requirements.txt
 ## **Data Sources**
 
 1. **Greenhouse Gas Emissions Inventory – Comunidad de Madrid**  
-   https://datos.comunidad.madrid/dataset/atm_inventario_gei  
-   Provides sectoral emissions data across the region since 1990.  
-   → Use to identify high-emission zones and quantify heating-related emissions for Pareto.
+[Dataset link](https://datos.comunidad.madrid/dataset/atm_inventario_gei)  
+Provides sectoral greenhouse gas emissions data across the region from 1990 onward.  
+Useful for identifying high-emission zones and quantifying heating-related emissions for Pareto analysis.
 
-2. **Emissions by Sector – Particulate Matter (PST)**  
+- Shape: `(5885, 6)`
+| Column name                     | Type    | Description                                                                 |
+|--------------------------------|---------|-----------------------------------------------------------------------------|
+| `inventario_gei_año`           | int     | Inventory year                                                              |
+| `inventario_gei_sector_crf`    | object  | CRF sector (e.g., Energy, Agriculture)                                      |
+| `inventario_gei_categoria_crf` | object  | CRF category within the sector                                              |
+| `inventario_gei_actividad_crf` | object  | Specific activity emitting the pollutant                                   |
+| `inventario_gei_contaminante`  | object  | Greenhouse gas type (CO₂, CH₄, N₂O, SF₆, HFCs, PFCs)                        |
+| `inventario_gei_gg_co2_eq`     | float   | Emissions in CO₂ equivalent (Gg CO₂-eq), converted from comma decimals      |
+
+> CRF (Common Reporting Format) is a standardized emissions classification system defined by the UNFCCC  
+> to ensure consistent reporting of greenhouse gas emissions by sector, category, and activity.
+
+3. **Emissions by Sector – Particulate Matter (PST)**  
    https://datos.comunidad.madrid/dataset/1911600  
    Breaks down emissions by activity and pollutant type.  
    → Supports air quality validation and helps correlate heating sources with pollution hotspots.
 
-3. **Energy Efficiency Certificates – Buildings**  
+4. **Energy Efficiency Certificates – Buildings**  
    https://datos.comunidad.madrid/catalogo/dataset/registro_certificados_eficiencia_energetica  
    Contains energy ratings for buildings.  
    → Filter by “Madrid” and join with district shapefiles to estimate heating demand.
 
-4. **Final Gas Consumption by Sector**  
+5. **Final Gas Consumption by Sector**  
    https://datos.comunidad.madrid/dataset/950a60f0-498c-48db-84f4-734990d3e253  
    Shows fossil fuel usage by sector.  
    → Use to estimate current heating fuel dependency and model transition scenarios to low-carbon alternatives.
 
-5. **Real-Time Air Quality – Madrid**  
+6. **Real-Time Air Quality – Madrid**  
    https://ciudadesabiertas.madrid.es/dynamicAPI/API/query/calair_tiemporeal.json?pageSize=5000  
    Live pollution data by station.  
    → Use to validate the impact of heating interventions on air quality and correlate with emissions zones.
 
-6. **Low Emission Zone Cameras – Madrid ZBE**  
+7. **Low Emission Zone Cameras – Madrid ZBE**  
    https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=1e4991bfd349b810VgnVCM1000001d4a900aRCRD  
    Geolocated camera data and zone boundaries.  
    → Useful for mapping enforcement zones and aligning heating upgrades with air quality policies.
 
-7. **Special Low Emission Zones – ZBEDEP Centro**  
+8. **Special Low Emission Zones – ZBEDEP Centro**  
    https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=019f24aaef3d3610VgnVCM1000001d4a900aRCRD  
    Shapefiles for protected zones.  
    → Use to overlay retrofit priorities and visualize policy-aligned intervention areas.
 
-8. **District-Level Shapefiles – Geoportal Madrid**  
+9. **District-Level Shapefiles – Geoportal Madrid**  
    https://geoportal.madrid.es/IDEAM_WBGEOPORTAL/descargasDisponibles.iam?fileIdent=aebec21d-5cad-11f0-9f8c-9009dfd270e9  
    Provides official district boundaries.  
    → Essential for spatial joins and mapping emissions, heating demand, and retrofit scenarios by district.
