@@ -35,36 +35,34 @@ Specific Objectives:
 ├── .gitignore
 ├── README.md
 ├── config.yml
-├── dashboard/
-│   └── streamlit_app.py
+├── dashboard/ # streamlit app
+│   ├── app.py
+│   ├── assets/
+│   └── components/
 ├── data/
-│   ├── raw/
-│   │   ├── camaras_mc.csv
-│   │   └── zbe_lpr.csv
-│   └── spatial/
-│       ├── Madrid_Central/              
-│       │   ├── Madrid_Central.shp
-│       │   └── Madrid_Central.shx
-│       ├── PANEL_HOGARES/
-│       │   ├── PANEL_HOGARES.shp
-│       │   └── PANEL_HOGARES.shx
-│       └── ZBE_MADRID/
-│           ├── ZBE_MADRID_CAMARAS.shp
-│           ├── ZBE_MADRID_CAMARAS.shx
-│           ├── ZBE_MADRID_FOTO_ROJOS.shp
-│           ├── ZBE_MADRID_FOTO_ROJOS.shx
-│           ├── ZBE_TM.shp
-│           └── ZBE_TM.shx
+│   ├── clean/ # after python cleaning
+│   ├── raw/ # raw csv
+│   ├── spatial/ # need it for maps and geo locations
+│   ├── stakeholders/ # csv 
+│   └── tech_specs/ # csv of specs for air pumps, distric heating, bio and gas boilers
 ├── figures/
-│   └── idae_madrid_heatmap.png
 ├── notebooks/
-│   └── 01_load_datasets.ipynb
+│   ├── 00_data_cleaning.ipynb  # call loaded datasets for pandas inspection and cleaning 
+│   ├── 01_emissions_pareto.ipynb
+│   ├── 02_adoption_modeling.ipynb
+│   ├── 03_dashboard_prototype.ipynb
+│   └── 04_stakeholder_analysis.ipynb
 ├── requirements.txt
 ├── sql/
-│   ├── create_database.sql
-│   └── query_database.sql
+│   ├── filter_retrofit_ready.sql
+│   ├── join_districts.sql
+│   └── load_emissions.sql
 └── src/
-    └── __init__.py
+    ├── load_data.py  # loads all datasets csv or API, lowercase columns and let ready for use in notebooks 
+    ├── model_adoption.py
+    ├── pareto_analysis.py
+    ├── stakeholder_model.py
+    └── utils.py
 ```
 ---
 ## Quick Start
