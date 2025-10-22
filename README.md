@@ -118,24 +118,20 @@ uv pip install -r requirements.txt
 ---
 ## **Data Sources**
 
-1. **Greenhouse Gas Emissions Inventory – Comunidad de Madrid**  
-[Dataset link](https://datos.comunidad.madrid/dataset/atm_inventario_gei)  
-Provides sectoral greenhouse gas emissions data across the region from 1990 onward.  
-Useful for identifying high-emission zones and quantifying heating-related emissions for Pareto analysis.
-
-- Shape: `(5885, 6)`
+1. **Greenhouse Gas Emissions Inventory – Comunidad de Madrid**  [Dataset link](https://datos.comunidad.madrid/dataset/atm_inventario_gei)  
+Provides sectoral greenhouse gas emissions data across the region from 1990 onward. Useful for identifying high-emission zones and quantifying heating-related emissions for Pareto analysis.
+- df_gei Shape: `(5885, 6)`
 ```
 | Column name                     | Type    | Description                                                                 |
-|--------------------------------|---------|-----------------------------------------------------------------------------|
-| `inventario_gei_año`           | int     | Inventory year                                                              |
-| `inventario_gei_sector_crf`    | object  | CRF sector (e.g., Energy, Agriculture)                                      |
-| `inventario_gei_categoria_crf` | object  | CRF category within the sector                                              |
-| `inventario_gei_actividad_crf` | object  | Specific activity emitting the pollutant                                   |
-| `inventario_gei_contaminante`  | object  | Greenhouse gas type (CO₂, CH₄, N₂O, SF₆, HFCs, PFCs)                        |
-| `inventario_gei_gg_co2_eq`     | float   | Emissions in CO₂ equivalent (Gg CO₂-eq), converted from comma decimals      |
+|---------------------------------|---------|-----------------------------------------------------------------------------|
+| `inventario_gei_año`            | int     | Inventory year                                                              |
+| `inventario_gei_sector_crf`     | object  | CRF sector (e.g., Energy, Agriculture)                                      |
+| `inventario_gei_categoria_crf`  | object  | CRF category within the sector                                              |
+| `inventario_gei_actividad_crf`  | object  | Specific activity emitting the pollutant                                    |
+| `inventario_gei_contaminante`   | object  | Greenhouse gas type (CO₂, CH₄, N₂O, SF₆, HFCs, PFCs)                        |
+| `inventario_gei_gg_co2_eq`      | float   | Emissions in CO₂ equivalent (Gg CO₂-eq), converted from comma decimals      |
 ´´´
-> CRF (Common Reporting Format) is a standardized emissions classification system defined by the UNFCCC  
-> to ensure consistent reporting of greenhouse gas emissions by sector, category, and activity.
+> CRF (Common Reporting Format) is a standardized emissions classification system defined by the UNFCCC to ensure consistent reporting of greenhouse gas emissions by sector, category, and activity.
 
 3. **Emissions by Sector – Particulate Matter (PST)**  
    https://datos.comunidad.madrid/dataset/1911600  
