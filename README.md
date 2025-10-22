@@ -1,3 +1,4 @@
+![Project Logo](figures/ayunta.madrid.png)
 # Low-Carbon Heating Roadmap for Madrid
 
 General Objective:
