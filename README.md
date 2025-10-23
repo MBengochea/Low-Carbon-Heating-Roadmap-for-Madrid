@@ -126,7 +126,7 @@ uv pip install -r requirements.txt
 Provides sectoral greenhouse gas emissions data across the region from 1990 onward. Useful for identifying high-emission zones and quantifying heating-related emissions for Pareto analysis.  
 - df_gei Shape: `(5885 rows, 6 columns)`
 <details>
-<summary> Click to expand GEI column dictionary / Diccionario de columnas GEI</summary>
+<summary> Click here to expand GEI column dictionary / Diccionario de columnas GEI</summary>
 
 | Column name                     | Type    | Meaning (EN)                                      | Significado (ES)                                      |
 |--------------------------------|---------|--------------------------------------------------|--------------------------------------------------------|
@@ -136,10 +136,10 @@ Provides sectoral greenhouse gas emissions data across the region from 1990 onwa
 | `inventario_gei_actividad_crf` | object  | CRF activity                                     | Actividad CRF desde la que se emite el contaminante   |
 | `inventario_gei_contaminante`  | object  | Greenhouse gas type                              | Tipo de gas de efecto invernadero                     |
 | `inventario_gei_gg_co2_eq`     | object  | Emissions in CO₂ equivalent (Gg CO₂-eq)          | Emisiones en Gg equivalentes de CO₂                   |
-
+CRF (Common Reporting Format) is a standardized emissions classification system defined by the UNFCCC to ensure consistent reporting of greenhouse gas emissions by sector, category, and activity.
 </details>
 
-CRF (Common Reporting Format) is a standardized emissions classification system defined by the UNFCCC to ensure consistent reporting of greenhouse gas emissions by sector, category, and activity.
+
 
 2. **Emissions by Sector – Particulate Matter (PST)**  
 [Dataset link](https://datos.comunidad.madrid/dataset/1911600)  
