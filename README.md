@@ -141,33 +141,47 @@ CRF (Common Reporting Format) is a standardized emissions classification system 
 [Dataset link](https://datos.comunidad.madrid/dataset/1911600)  
 Breaks down emissions by activity and pollutant type.  
 → Supports air quality validation and helps correlate heating sources with pollution hotspots.
+- df_pst Shape: `(5885 rows, 6 columns)`
 
-3. **Energy Efficiency Certificates – Buildings**  
+| Column name           | Type     | Description (EN)                                                | Descripción (ES)                                           |
+|-----------------------|----------|------------------------------------------------------------------|-------------------------------------------------------------|
+| `año`                 | int      | Reference year                                                   | Año de referencia                                           |
+| `concepto`            | object   | Emission concept (activity + pollutant type)                    | Concepto de emisión (actividad + tipo de contaminante)      |
+| `tipo_territorio`     | object   | Territory type (e.g., municipality, region)                     | Tipo de territorio (municipio, región, etc.)                |
+| `código_territorio`   | float    | Territory code (may be missing)                                 | Código del territorio (puede faltar)                        |
+| `territorio`          | float    | Territory name (may be missing)                                 | Nombre del territorio (puede faltar)                        |
+| `valor`               | int      | Emission value in metric tons                                   | Valor de emisión en toneladas métricas                      |
+| `estado_dato`         | float    | Data status (e.g., estimated, validated; often missing)         | Estado del dato (estimado, validado; frecuentemente nulo)   |
+
+Note: Missing values in `territorio`, `código_territorio`, and `estado_dato` suggest regional aggregates or incomplete metadata.
+
+
+4. **Energy Efficiency Certificates – Buildings**  
 [Dataset link](https://datos.comunidad.madrid/catalogo/dataset/registro_certificados_eficiencia_energetica)  
 Contains energy ratings for buildings.  
 → Filter by “Madrid” and join with district shapefiles to estimate heating demand.
 
-4. **Final Gas Consumption by Sector**  
+5. **Final Gas Consumption by Sector**  
 [Dataset link](https://datos.comunidad.madrid/dataset/950a60f0-498c-48db-84f4-734990d3e253)  
 Shows fossil fuel usage by sector.  
 → Use to estimate current heating fuel dependency and model transition scenarios to low-carbon alternatives.
 
-5. **Real-Time Air Quality – Madrid**  
+6. **Real-Time Air Quality – Madrid**  
 [Dataset link](https://ciudadesabiertas.madrid.es/dynamicAPI/API/query/calair_tiemporeal.json?pageSize=5000)  
 Live pollution data by station.  
 → Use to validate the impact of heating interventions on air quality and correlate with emissions zones.
 
-6. **Low Emission Zone Cameras – Madrid ZBE**  
+7. **Low Emission Zone Cameras – Madrid ZBE**  
 [Dataset link](https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=1e4991bfd349b810VgnVCM1000001d4a900aRCRD)  
 Geolocated camera data and zone boundaries.  
 → Useful for mapping enforcement zones and aligning heating upgrades with air quality policies.
 
-7. **Special Low Emission Zones – ZBEDEP Centro**  
+8. **Special Low Emission Zones – ZBEDEP Centro**  
 [Dataset link](https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=019f24aaef3d3610VgnVCM1000001d4a900aRCRD)  
 Shapefiles for protected zones.  
 → Use to overlay retrofit priorities and visualize policy-aligned intervention areas.
 
-8. **District-Level Shapefiles – Geoportal Madrid**  
+9. **District-Level Shapefiles – Geoportal Madrid**  
 [Dataset link](https://geoportal.madrid.es/IDEAM_WBGEOPORTAL/descargasDisponibles.iam?fileIdent=aebec21d-5cad-11f0-9f8c-9009dfd270e9)  
 Provides official district boundaries.  
 → Essential for spatial joins and mapping emissions, heating demand, and retrofit scenarios by district.
