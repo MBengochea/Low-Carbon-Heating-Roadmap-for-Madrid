@@ -136,17 +136,16 @@ Provides sectoral greenhouse gas emissions data across the region from 1990 onwa
 | `inventario_gei_actividad_crf` | object  | CRF activity                                     | Actividad CRF desde la que se emite el contaminante   |
 | `inventario_gei_contaminante`  | object  | Greenhouse gas type                              | Tipo de gas de efecto invernadero                     |
 | `inventario_gei_gg_co2_eq`     | object  | Emissions in CO₂ equivalent (Gg CO₂-eq)          | Emisiones en Gg equivalentes de CO₂                   |
-CRF (Common Reporting Format) is a standardized emissions classification system defined by the UNFCCC to ensure consistent reporting of greenhouse gas emissions by sector, category, and activity.
 </details>
-
-
+CRF (Common Reporting Format) is a standardized emissions classification system defined by the UNFCCC to ensure consistent reporting of greenhouse gas emissions by sector, category, and activity.
 
 2. **Emissions by Sector – Particulate Matter (PST)**  
 [Dataset link](https://datos.comunidad.madrid/dataset/1911600)  
 Breaks down emissions by activity and pollutant type.  
 → Supports air quality validation and helps correlate heating sources with pollution hotspots.
 - df_pst Shape: `(5885 rows, 6 columns)`
-
+<details>
+<summary> Click here to expand PST column dictionary / Diccionario de columnas PST</summary>
 | Column name           | Type     | Description (EN)                                                | Descripción (ES)                                           |
 |-----------------------|----------|------------------------------------------------------------------|-------------------------------------------------------------|
 | `año`                 | int      | Reference year                                                   | Año de referencia                                           |
@@ -156,7 +155,7 @@ Breaks down emissions by activity and pollutant type.
 | `territorio`          | float    | Territory name (may be missing)                                 | Nombre del territorio (puede faltar)                        |
 | `valor`               | int      | Emission value in metric tons                                   | Valor de emisión en toneladas métricas                      |
 | `estado_dato`         | float    | Data status (e.g., estimated, validated; often missing)         | Estado del dato (estimado, validado; frecuentemente nulo)   |
-
+<details>
 Note: Missing values in `territorio`, `código_territorio`, and `estado_dato` suggest regional aggregates or incomplete metadata.
 
 
