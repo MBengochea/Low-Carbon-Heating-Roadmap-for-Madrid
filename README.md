@@ -144,7 +144,7 @@ CRF (Common Reporting Format) is a standardized emissions classification system 
 [Dataset link](https://datos.comunidad.madrid/dataset/1911600)  
 Breaks down emissions by activity and pollutant type.  
 → Supports air quality validation and helps correlate heating sources with pollution hotspots.
-- df_pst Shape: `(5885 rows, 6 columns)`
+- df_pst Shape: `(264 rows, 7 columns)`
 <details>
 <summary> Click here to expand PST column dictionary / Diccionario de columnas PST</summary>
   
@@ -166,18 +166,21 @@ Note: Missing values in `territorio`, `código_territorio`, and `estado_dato` su
 [Dataset link](https://datos.comunidad.madrid/catalogo/dataset/registro_certificados_eficiencia_energetica)  
 Contains energy ratings for buildings.  
 → Filter by “Madrid” and join with district shapefiles to estimate heating demand.
+- df_ceee Shape: `(115196 rows, 86 columns)`
 <hr>
 
 4. **Final Gas Consumption by Sector**  
 [Dataset link](https://datos.comunidad.madrid/dataset/950a60f0-498c-48db-84f4-734990d3e253)  
 Shows fossil fuel usage by sector.  
 → Use to estimate current heating fuel dependency and model transition scenarios to low-carbon alternatives.
+- df_gas Shape: `(184 rows, 7 columns)`
 <hr>
 
 5. **Real-Time Air Quality – Madrid**  
 [Dataset link](https://ciudadesabiertas.madrid.es/dynamicAPI/API/query/calair_tiemporeal.json?pageSize=5000)  
 Live pollution data by station.  
 → Use to validate the impact of heating interventions on air quality and correlate with emissions zones.
+df_air_realtime Shape:  `(126 rows, 56 columns)`
 <hr>
 
 6. **Low Emission Zone Cameras – Madrid ZBE**  
