@@ -139,7 +139,6 @@ Provides sectoral greenhouse gas emissions data across the region from 1990 onwa
 </details>
 CRF (Common Reporting Format) is a standardized emissions classification system defined by the UNFCCC to ensure consistent reporting of greenhouse gas emissions by sector, category, and activity.
 
-
 2. **Emissions by Sector – Particulate Matter (PST)**  
 [Dataset link](https://datos.comunidad.madrid/dataset/1911600)  
 Breaks down emissions by activity and pollutant type.  
@@ -160,7 +159,7 @@ Breaks down emissions by activity and pollutant type.
 Note: Missing values in `territorio`, `código_territorio`, and `estado_dato` suggest regional aggregates or incomplete metadata.
 
 
-4. **Energy Efficiency Certificates – Buildings**  
+3. **Energy Efficiency Certificates – Buildings**  
 [Dataset link](https://datos.comunidad.madrid/catalogo/dataset/registro_certificados_eficiencia_energetica)  
 Contains energy ratings for buildings.  
 → Filter by “Madrid” and join with district shapefiles to estimate heating demand.
