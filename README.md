@@ -125,52 +125,19 @@ uv pip install -r requirements.txt
 [Dataset link](https://datos.comunidad.madrid/dataset/atm_inventario_gei)  
 Provides sectoral greenhouse gas emissions data across the region from 1990 onward. Useful for identifying high-emission zones and quantifying heating-related emissions for Pareto analysis.  
 - df_gei Shape: `(5885 rows, 6 columns)`
+<details>
+<summary> Click to expand GEI column dictionary / Diccionario de columnas GEI</summary>
 
-<table style="font-size:50%;">
-  <tr>
-    <th>Column name</th>
-    <th>Type</th>
-    <th>Meaning (EN)</th>
-    <th>Significado (ES)</th>
-  </tr>
-  <tr>
-    <td><code>inventario_gei_año</code></td>
-    <td>int</td>
-    <td>Reference Year</td>
-    <td>Año de Referencia</td>
-  </tr>
-  <tr>
-    <td><code>inventario_gei_sector_crf</code></td>
-    <td>object</td>
-    <td>CRF sector</td>
-    <td>Sector CRF desde el que se emite el contaminante</td>
-  </tr>
-  <tr>
-    <td><code>inventario_gei_categoria_crf</code></td>
-    <td>object</td>
-    <td>CRF category</td>
-    <td>Categoría CRF desde la que se emite el contaminante</td>
-  </tr>
-  <tr>
-    <td><code>inventario_gei_actividad_crf</code></td>
-    <td>object</td>
-    <td>CRF activity</td>
-    <td>Actividad CRF desde la que se emite el contaminante</td>
-  </tr>
-  <tr>
-    <td><code>inventario_gei_contaminante</code></td>
-    <td>object</td>
-    <td>Greenhouse gas type</td>
-    <td>Tipo de gas de efecto invernadero</td>
-  </tr>
-  <tr>
-    <td><code>inventario_gei_gg_co2_eq</code></td>
-    <td>object</td>
-    <td>Emissions in CO₂ equivalent (Gg CO₂-eq)</td>
-    <td>Emisiones en Gg equivalentes de CO₂</td>
-  </tr>
-</table>
+| Column name                     | Type    | Meaning (EN)                                      | Significado (ES)                                      |
+|--------------------------------|---------|--------------------------------------------------|--------------------------------------------------------|
+| `inventario_gei_año`           | int     | Reference Year                                   | Año de referencia                                     |
+| `inventario_gei_sector_crf`    | object  | CRF sector                                       | Sector CRF desde el que se emite el contaminante      |
+| `inventario_gei_categoria_crf` | object  | CRF category                                     | Categoría CRF desde la que se emite el contaminante   |
+| `inventario_gei_actividad_crf` | object  | CRF activity                                     | Actividad CRF desde la que se emite el contaminante   |
+| `inventario_gei_contaminante`  | object  | Greenhouse gas type                              | Tipo de gas de efecto invernadero                     |
+| `inventario_gei_gg_co2_eq`     | object  | Emissions in CO₂ equivalent (Gg CO₂-eq)          | Emisiones en Gg equivalentes de CO₂                   |
 
+</details>
 
 CRF (Common Reporting Format) is a standardized emissions classification system defined by the UNFCCC to ensure consistent reporting of greenhouse gas emissions by sector, category, and activity.
 
