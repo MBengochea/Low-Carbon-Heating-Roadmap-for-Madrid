@@ -146,6 +146,7 @@ Breaks down emissions by activity and pollutant type.
 - df_pst Shape: `(5885 rows, 6 columns)`
 <details>
 <summary> Click here to expand PST column dictionary / Diccionario de columnas PST</summary>
+  
 | Column name           | Type     | Description (EN)                                                | Descripción (ES)                                           |
 |-----------------------|----------|------------------------------------------------------------------|-------------------------------------------------------------|
 | `año`                 | int      | Reference year                                                   | Año de referencia                                           |
