@@ -126,9 +126,7 @@ uv pip install -r requirements.txt
 Provides sectoral greenhouse gas emissions data across the region from 1990 onward. Useful for identifying high-emission zones and quantifying heating-related emissions for Pareto analysis.  
 - df_gei Shape: `(5885 rows, 6 columns)`
 
-<h4>GEI Dataset Columns / Columnas del conjunto GEI</h4>
-
-<table style="font-size:85%;">
+<table style="font-size:50%;">
   <tr>
     <th>Column name</th>
     <th>Type</th>
