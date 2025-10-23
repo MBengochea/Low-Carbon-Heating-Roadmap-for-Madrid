@@ -138,9 +138,7 @@ Provides sectoral greenhouse gas emissions data across the region from 1990 onwa
 | `inventario_gei_gg_co2_eq`     | object  | Emissions in CO₂ equivalent (Gg CO₂-eq)          | Emisiones en Gg equivalentes de CO₂                   |
 </details>
 CRF (Common Reporting Format) is a standardized emissions classification system defined by the UNFCCC to ensure consistent reporting of greenhouse gas emissions by sector, category, and activity.
-
-
-
+\n
 2. **Emissions by Sector – Particulate Matter (PST)**  
 [Dataset link](https://datos.comunidad.madrid/dataset/1911600)  
 Breaks down emissions by activity and pollutant type.  
