@@ -156,7 +156,7 @@ Breaks down emissions by activity and pollutant type.
 | `territorio`          | float    | Territory name (may be missing)                                 | Nombre del territorio (puede faltar)                        |
 | `valor`               | int      | Emission value in metric tons                                   | Valor de emisión en toneladas métricas                      |
 | `estado_dato`         | float    | Data status (e.g., estimated, validated; often missing)         | Estado del dato (estimado, validado; frecuentemente nulo)   |
-<details>
+</details>
 Note: Missing values in `territorio`, `código_territorio`, and `estado_dato` suggest regional aggregates or incomplete metadata.
 
 
