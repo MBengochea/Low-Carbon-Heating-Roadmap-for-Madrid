@@ -122,8 +122,7 @@ uv pip install -r requirements.txt
 ## **Data Sources**
 
 1. **Greenhouse Gas Emissions Inventory – Comunidad de Madrid**  
-[Dataset link](https://datos.comunidad.madrid/dataset/atm_inventario_gei)  
-Provides sectoral greenhouse gas emissions data across the region from 1990 onward. Useful for identifying high-emission zones and quantifying heating-related emissions for Pareto analysis.  
+[Dataset link](https://datos.comunidad.madrid/dataset/atm_inventario_gei) Provides sectoral greenhouse gas emissions data across the region from 1990 onward. Useful for identifying high-emission zones and quantifying heating-related emissions for Pareto analysis.  
 - df_gei Shape: `(5885 rows, 6 columns)`
 <details>
 <summary> Click here to expand GEI column dictionary / Diccionario de columnas GEI</summary>
@@ -141,9 +140,7 @@ CRF (Common Reporting Format) is a standardized emissions classification system 
 <hr>
 
 2. **Emissions by Sector – Particulate Matter (PST)**  
-[Dataset link](https://datos.comunidad.madrid/dataset/1911600)  
-Breaks down emissions by activity and pollutant type.  
-→ Supports air quality validation and helps correlate heating sources with pollution hotspots.
+[Dataset link](https://datos.comunidad.madrid/dataset/1911600)  Breaks down emissions by activity and pollutant type. → Supports air quality validation and helps correlate heating sources with pollution hotspots.
 - df_pst Shape: `(264 rows, 7 columns)`
 <details>
 <summary> Click here to expand PST column dictionary / Diccionario de columnas PST</summary>
@@ -167,6 +164,28 @@ Note: Missing values in `territorio`, `código_territorio`, and `estado_dato` su
 Contains energy ratings for buildings.  
 → Filter by “Madrid” and join with district shapefiles to estimate heating demand.
 - df_ceee Shape: `(115196 rows, 86 columns)`
+<details>
+<summary> Click here to expand PST column dictionary / Diccionario de columnas PST</summary>
+| Column Selection | English meaning | Spanish meaning | Units | Why Keep |
+|---|---|---|---:|---|
+| edif_codpost | Postal code | Código postal | string(5) | Validate district membership and spatial joins |
+| edif_fecha | Certificate date | Fecha de emisión | datetime | Time dimension for trends and eligibility |
+| edif_año | Year built | Año de construcción | int | Building vintage for retrofit readiness |
+| edif_superf | Habitable surface | Superficie habitable | m2 | Normalize metrics and scale interventions |
+| edif_compac | Compactness | Compacticidad vol/sup | m3/m2 | Proxy for envelope losses and retrofit impact |
+| edif_calef | % area heated | % superficie con calefacción | % | Identify heated stock to target interventions |
+| calefac_tipo | Heating type | Tipo de calefacción | category | Core tech classification for replacement scenarios |
+| calefac_vector | Heating vector | Vector energético calefacción | category | Fuel mix to model decarbonization pathway |
+| elec_demcalef | Heating demand (DB-HE) | Demanda calefacción (DB-HE) | kWh/m2·a | Baseline heating load for Pareto and sizing |
+| final_calef | Final energy heating | Consumo final calefacción | kWh/m2·a | Direct mapping to heating energy use |
+| norenov_calef | Non-renewable heating energy | Energía no renovable calefacción | kWh/m2·a | Fossil heating baseline for emissions modelling |
+| norenov_co2calef | CO2 heating | Emisiones CO2 calefacción | kg CO2/m2·a | Primary outcome metric for heating emissions |
+| acs_tipo | Hot-water type | Tipo de ACS | category | ACS decarbonization route and sizing |
+| elec_demacs | ACS demand (DB-HE) | Demanda ACS (DB-HE) | kWh/m2·a | ACS sizing and emissions attribution |
+| cal_calefdem | Heating demand rating | Calificación demanda calefacción (A–F) | grade | Quick filter to prioritise worst performers |
+| cal_norenovglobal | Non-renewable rating global | Calificación energía no renovable (A–F) | grade | Flag poor stock for district prioritisation |
+| cal_co2global | CO2 rating global | Calificación emisiones CO2 (A–F) | grade | Communicable KPI for stakeholders |
+</details>
 <hr>
 
 4. **Final Gas Consumption by Sector**  
