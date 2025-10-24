@@ -164,7 +164,7 @@ Contains energy ratings for buildings.
 → Filter by “Madrid” and join with district shapefiles to estimate heating demand.
 - df_ceee Shape: `(115196 rows, 86 columns)` cleaned to `(55717 rows, 17 columns)`
 <details>
-<summary> Click here to expand PST column dictionary / Diccionario de columnas PST</summary>
+<summary> Click here to expand CEEE column dictionary / Diccionario de columnas CEEE</summary>
   
 | Column Selection | English meaning | Spanish meaning | Units | Why Keep |
 |---|---|---|---:|---|
@@ -190,29 +190,86 @@ Contains energy ratings for buildings.
 <hr>
 
 4. **Final Gas Consumption by Sector**  
-[Dataset link](https://datos.comunidad.madrid/dataset/950a60f0-498c-48db-84f4-734990d3e253)  
-Shows fossil fuel usage by sector.  
-→ Use to estimate current heating fuel dependency and model transition scenarios to low-carbon alternatives.
+[Dataset link](https://datos.comunidad.madrid/dataset/950a60f0-498c-48db-84f4-734990d3e253)  Shows fossil fuel usage by sector. → Use to estimate current heating fuel dependency and model transition scenarios to low-carbon alternatives.
+
 - df_gas Shape: `(184 rows, 7 columns)`
+<details>
+<summary> Click here to expand GAS column dictionary / Diccionario de columnas GAS</summary>
+
+| Column name                     | Type    | Meaning (EN)                                      | Significado (ES)                                      |
+|--------------------------------|---------|--------------------------------------------------|--------------------------------------------------------|
+| `año`           | int64     | Reference Year                                  | Año de Referencia                              |
+| `valor`    | int64  | kilo- Tonne of Oil equivalent, 1 ktoe = 11,63 GWh | kilo toneladas equivalentes de petroleo, 1 ktep = 11,63 GWh     |
+</details>
+
 <hr>
 
 5. **Real-Time Air Quality – Madrid**  
-[Dataset link](https://ciudadesabiertas.madrid.es/dynamicAPI/API/query/calair_tiemporeal.json?pageSize=5000)  
-Live pollution data by station.  
+[Dataset link](https://ciudadesabiertas.madrid.es/dynamicAPI/API/query/calair_tiemporeal.json?pageSize=5000) Live pollution data by station.  
 → Use to validate the impact of heating interventions on air quality and correlate with emissions zones.
-df_air_realtime Shape:  `(126 rows, 56 columns)`
+
+- df_air_realtime Shape:  `(126 rows, 56 columns)`
+<details>
+<summary> Click here to expand AIR_REALTIME column dictionary / Diccionario de columnas AIR_REALTIME</summary>
+
+| Field            | English Description                                      | Descripción en Español                                      |
+|------------------|----------------------------------------------------------|--------------------------------------------------------------|
+| `provincia`      | Province code (always 28 for Madrid)                     | Código de provincia (siempre 28 para Madrid)                 |
+| `municipio`      | Municipality code (always 079 for Madrid city)           | Código del municipio (siempre 079 para Madrid capital)       |
+| `estacion`       | Station code (e.g., 004 = Plaza de España)               | Código de estación (ej. 004 = Plaza de España)               |
+| `magnitud`       | Pollutant code (e.g., 08 = NO₂, 10 = PM10)               | Código de contaminante (ej. 08 = NO₂, 10 = PM10)             |
+| `punto_muestreo` | Sampling point ID: province + municipality + station + pollutant + technique | ID del punto de muestreo: provincia + municipio + estación + magnitud + técnica |
+| `ano`            | Year of measurement (4 digits)                           | Año de medición (4 cifras)                                   |
+| `mes`            | Month (1–12)                                             | Mes (1–12)                                                   |
+| `dia`            | Day of month (1–31)                                      | Día del mes (1–31)                                           |
+| `h01`–`h24`      | Hourly value of pollutant (e.g., µg/m³ or mg/m³)         | Valor horario del contaminante (ej. µg/m³ o mg/m³)           |
+| `v01`–`v24`      | Validation code for each hour (see below)                | Código de validación por hora (ver abajo)                    |
+
+## Validation Codes (`vXX`)
+
+| Code | English Meaning               | Significado en Español                  |
+|------|-------------------------------|------------------------------------------|
+| `V`  | Validated                     | Validado                                 |
+| `N`  | Not valid                     | No válido                                |
+| `P`  | Pending validation            | Pendiente de validación                  |
+| `F`  | Missing data                  | Falta de datos                           |
+| `S`  | Substituted (estimated)       | Sustituido por estimación                |
+
+## Common Pollutant Codes (`magnitud`)
+
+| Code | Pollutant (EN)               | Contaminante (ES)             | Unit        |
+|------|------------------------------|-------------------------------|-------------|
+| 01   | Sulfur Dioxide (SO₂)         | Dióxido de Azufre (SO₂)       | µg/m³       |
+| 06   | Carbon Monoxide (CO)         | Monóxido de Carbono (CO)      | mg/m³       |
+| 07   | Nitric Oxide (NO)            | Monóxido de Nitrógeno (NO)    | µg/m³       |
+| 08   | Nitrogen Dioxide (NO₂)       | Dióxido de Nitrógeno (NO₂)    | µg/m³       |
+| 09   | PM2.5                        | Partículas < 2.5 µm (PM2.5)    | µg/m³       |
+| 10   | PM10                         | Partículas < 10 µm (PM10)      | µg/m³       |
+| 12   | Nitrogen Oxides (NOx)        | Óxidos de Nitrógeno (NOx)     | µg/m³       |
+| 14   | Ozone (O₃)                   | Ozono (O₃)                     | µg/m³       |
+| 20   | Toluene                      | Tolueno                        | µg/m³       |
+| 30   | Benzene                      | Benceno                        | µg/m³       |
+| 42   | Total Hydrocarbons (Hexane) | Hidrocarburos totales (hexano)| mg/m³       |
+| 43   | Methane (CH₄)               | Metano (CH₄)                   | mg/m³       |
+| 44   | Non-methane Hydrocarbons    | Hidrocarburos no metánicos    | mg/m³       |
+
+</details>
 <hr>
 
 6. **Low Emission Zone Cameras – Madrid ZBE**  
 [Dataset link](https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=1e4991bfd349b810VgnVCM1000001d4a900aRCRD)  
 Geolocated camera data and zone boundaries.  
 → Useful for mapping enforcement zones and aligning heating upgrades with air quality policies.
+
+df_zbe_cameras Shape:  `(465 rows, 4 columns)`
 <hr>
 
 7. **Special Low Emission Zones – ZBEDEP Centro**  
 [Dataset link](https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=019f24aaef3d3610VgnVCM1000001d4a900aRCRD)  
 Shapefiles for protected zones.  
 → Use to overlay retrofit priorities and visualize policy-aligned intervention areas.
+
+df_zbe_zones Shape:  `(115 rows, 14 columns)`
 <hr>
 
 8. **District-Level Shapefiles – Geoportal Madrid**  
@@ -221,13 +278,12 @@ Provides official district boundaries.
 → Essential for spatial joins and mapping emissions, heating demand, and retrofit scenarios by district.
 <hr>
 
-<!--
+
 9. **3D Building Models – Geoportal Madrid**  
 [Dataset link](https://geoportal.madrid.es/IDEAM_WBGEOPORTAL/dataset.iam?id=ece2d15a-d16f-46e8-aaec-9576771b9997)  
 High-resolution 3D geometry grouped by district.  
 → Use to visualize top 20% emission districts in 3D and overlay thematic data like retrofit cost or emissions gap closure.
 <hr>
--->
 
 10. **Heating Technology Specs – Spain (IDAE, Eurostat, JRC, REE)**  
 `data/tech_specs/heating_technologies.csv`  
@@ -242,3 +298,9 @@ Sources include:
 - [Eurostat Energy Balances – Gas Boilers Spain](https://ec.europa.eu/eurostat/web/energy/data/energy-balances)
 - [REE National Statistical Series- Biomass Boilers Spain](https://www.ree.es/en/datos/publications/national-statistical-series)
 <hr>
+
+11. **Avg. Income per postal Code – Spain (Agencia Tributaria)**  
+`data/stakeholders/renta_media_madrid.csv` [Source](https://sede.agenciatributaria.gob.es/AEAT/Contenidos_Comunes/La_Agencia_Tributaria/Estadisticas/Publicaciones/sites/irpfCodPostal/2023/home.html)
+<hr>
+
+12. **Stakeholder Map**
