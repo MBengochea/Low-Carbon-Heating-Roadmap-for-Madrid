@@ -49,12 +49,12 @@ def load_air_realtime(page_size=5000, save=False):  # JSON aire tiempo real / re
     return save_clean(df, "air_realtime.csv") if save else df
 
 def load_zbe_cameras(save=False):  # cámaras ZBE / ZBE cameras
-    url = "https://datos.madrid.es/egob/catalogo/300342-0-camaras-zona-bajas-emisiones.csv"
+    url = "https://datos.madrid.es/egob/catalogo/300654-0-Circulaci%C3%B3n-Camaras-Trafico.csv"
     df = pd.read_csv(url, encoding="latin1", sep=";"); df = _light(_std(df))
     return save_clean(df, "zbe_cameras.csv") if save else df
 
 def load_zbe_zones(save=False):  # zonas especiales ZBE / special ZBE zones
-    url = "https://datos.madrid.es/egob/catalogo/300343-0-zonas-especiales-zbe.csv"
+    url = "https://datos.madrid.es/egob/catalogo/300229-4-trafico-madrid-central.csv"
     df = pd.read_csv(url, encoding="latin1", sep=";"); df = _light(_std(df))
     return save_clean(df, "zbe_zones.csv") if save else df
 
@@ -72,6 +72,16 @@ def load_heating_specs(save=False):  # tecnologías calefacción / heating tech 
     path = ROOT / "data" / "tech_specs" / "heating_technologies.csv"
     df = pd.read_csv(path); df = _light(_std(df))
     return save_clean(df, "heating_specs.csv") if save else df
+
+def load_avg_income(save=False):  # Renta media por código postal Madrid / Average Income by postal code Madrid 
+    path = ROOT / "data" / "stakeholders" / "renta_media_madrid.csv"
+    df = pd.read_csv(path); df = _light(_std(df))
+    return save_clean(df, "renta_media_madrid.csv") if save else df
+
+def load_stakeholder_map(save=False):  # Mapa de Stakeholders / Stakeholders Map 
+    path = ROOT / "data" / "stakeholders" / "stakeholder_map.csv"
+    df = pd.read_csv(path); df = _light(_std(df))
+    return save_clean(df, "stakeholder_map.csv") if save else df
 
 # -----------------------
 # CLI test / prueba CLI
