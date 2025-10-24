@@ -207,6 +207,7 @@ df_air_realtime Shape:  `(126 rows, 56 columns)`
 [Dataset link](https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=1e4991bfd349b810VgnVCM1000001d4a900aRCRD)  
 Geolocated camera data and zone boundaries.  
 → Useful for mapping enforcement zones and aligning heating upgrades with air quality policies.
+
 df_zbe_cameras Shape:  `(465 rows, 4 columns)`
 <hr>
 
@@ -214,6 +215,8 @@ df_zbe_cameras Shape:  `(465 rows, 4 columns)`
 [Dataset link](https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=019f24aaef3d3610VgnVCM1000001d4a900aRCRD)  
 Shapefiles for protected zones.  
 → Use to overlay retrofit priorities and visualize policy-aligned intervention areas.
+
+df_zbe_zones Shape:  `(115 rows, 14 columns)`
 <hr>
 
 8. **District-Level Shapefiles – Geoportal Madrid**  
