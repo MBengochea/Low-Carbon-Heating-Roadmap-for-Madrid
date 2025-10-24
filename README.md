@@ -136,7 +136,7 @@ uv pip install -r requirements.txt
 | `inventario_gei_contaminante`  | object  | Greenhouse gas type                              | Tipo de gas de efecto invernadero                     |
 | `inventario_gei_gg_co2_eq`     | object  | Emissions in CO₂ equivalent (Gg CO₂-eq)          | Emisiones en Gg equivalentes de CO₂                   |
 </details>
-CRF (Common Reporting Format) is a standardized emissions classification system defined by the UNFCCC to ensure consistent reporting of greenhouse gas emissions by sector, category, and activity.
+
 <hr>
 
 2. **Emissions by Sector – Particulate Matter (PST)**  
@@ -155,7 +155,6 @@ CRF (Common Reporting Format) is a standardized emissions classification system 
 | `valor`               | int      | Emission value in metric tons                                   | Valor de emisión en toneladas métricas                      |
 | `estado_dato`         | float    | Data status (e.g., estimated, validated; often missing)         | Estado del dato (estimado, validado; frecuentemente nulo)   |
 </details>
-Note: Missing values in `territorio`, `código_territorio`, and `estado_dato` suggest regional aggregates or incomplete metadata.
 
 <hr>
 
@@ -166,6 +165,7 @@ Contains energy ratings for buildings.
 - df_ceee Shape: `(115196 rows, 86 columns)`
 <details>
 <summary> Click here to expand PST column dictionary / Diccionario de columnas PST</summary>
+  
 | Column Selection | English meaning | Spanish meaning | Units | Why Keep |
 |---|---|---|---:|---|
 | edif_codpost | Postal code | Código postal | string(5) | Validate district membership and spatial joins |
@@ -186,6 +186,7 @@ Contains energy ratings for buildings.
 | cal_norenovglobal | Non-renewable rating global | Calificación energía no renovable (A–F) | grade | Flag poor stock for district prioritisation |
 | cal_co2global | CO2 rating global | Calificación emisiones CO2 (A–F) | grade | Communicable KPI for stakeholders |
 </details>
+
 <hr>
 
 4. **Final Gas Consumption by Sector**  
