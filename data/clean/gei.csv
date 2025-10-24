@@ -1,4 +1,4 @@
-year,sector_crf,category_crf,activity_crf,pollutant,co2_eq
+﻿year,sector_crf,category_crf,activity_crf,pollutant,co2_eq
 1990,CRF 1 Energía,1.A. Actividades de combustión,1A1a Producción de energía y calor en plantas de servicio público,N2O,0.015104735
 1990,CRF 1 Energía,1.A. Actividades de combustión,1A1a Producción de energía y calor en plantas de servicio público,CH4,0.01595958
 1990,CRF 1 Energía,1.A. Actividades de combustión,1A1c  Fabricación de combustibles sólidos y otras industrias energéticas,CH4,0.001038352

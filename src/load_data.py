@@ -16,7 +16,7 @@ def _std(df): df = df.copy(); df.columns = [str(c).lower().strip().replace(" ", 
 def _light(df): return df.copy()
 
 # guarda CSV limpio / save cleaned CSV
-def save_clean(df, name): out = CLEAN / name; df.to_csv(out, index=False); return out
+def save_clean(df, name): out = CLEAN / name; df.to_csv(out, index=False, encoding="utf-8-sig" ); return out
 
 # carga desde CKAN / load from CKAN
 def fetch_ckan_csv(id, sep=";", enc="latin1", low_memory=True):
@@ -86,3 +86,50 @@ if __name__ == "__main__":
     for loader in [load_gei, load_ceee, load_pst, load_gas, load_air_realtime, load_zbe_cameras, load_zbe_zones, load_districts_geoportal, load_buildings_3d, load_heating_specs]:
         try: df = loader(); print(f"{loader.__name__} rows: {len(df)}")
         except Exception as e: print(f"{loader.__name__} failed: {e}")
+
+#------------------------------------------
+#Inspect numerical and categorical columns
+#------------------------------------------
+
+# inspect_columns: shows identical rows count + per-column stats (null count/%, uniques, duplicate values)/ inspect_columns: muestra filas idénticas + estadísticas por columna (nulos count/%, únicos, valores duplicados)
+import pandas as pd, numpy as np
+
+def inspect_columns(df, name="df"):
+    n = len(df)
+    identical_rows = n - df.drop_duplicates().shape[0]                     # identical rows count / filas idénticas
+    print(f"\n⨁ Inspection of {name} — shape: {df.shape}  | identical_rows: {identical_rows}")
+
+    # helpers to choose columns by dtype / helpers para elegir columnas por tipo
+    num_cols = df.select_dtypes(include=[np.number]).columns.tolist()
+    date_cols = [c for c in df.columns if pd.api.types.is_datetime64_any_dtype(df[c])]
+    cat_cols = [c for c in df.columns
+                if (df[c].dtype == "object" or pd.api.types.is_categorical_dtype(df[c]))
+                and c not in date_cols]
+
+    def stats(cols):
+        out = {}
+        for c in cols:
+            null_count = int(df[c].isna().sum())                            # null count / conteo nulos
+            null_pct = round(null_count / n * 100, 4)                       # null percent as % / % de nulos
+            unique = int(df[c].nunique(dropna=True))                       # unique non-null values / únicos (sin NaN)
+            dup_values = n - int(df[c].nunique(dropna=False))               # duplicate-value count (counts NaN as value) / cantidad de valores duplicados (NaN contado)
+            out[c] = (null_count, null_pct, unique, dup_values)
+        return out
+
+    ns = stats(num_cols)
+    if ns:
+        print("\n∑ Numeric columns:")
+        for c, (null_count, null_pct, unique, dup_values) in ns.items():
+            print(f"  {c}: null_count={null_count} | null%={null_pct}% | unique_nonnull={unique} | duplicate_values_count={dup_values}")
+
+    ds = stats(date_cols)
+    if ds:
+        print("\n∂ Datetime columns:")
+        for c, (null_count, null_pct, unique, dup_values) in ds.items():
+            print(f"  {c}: null_count={null_count} | null%={null_pct}% | unique_nonnull={unique} | duplicate_values_count={dup_values}")
+
+    cs = stats(cat_cols)
+    if cs:
+        print("\nⅭ Categorical columns:")
+        for c, (null_count, null_pct, unique, dup_values) in cs.items():
+            print(f"  {c}: null_count={null_count} | null%={null_pct}% | unique_nonnull={unique} | duplicate_values_count={dup_values}")
