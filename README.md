@@ -162,7 +162,7 @@ uv pip install -r requirements.txt
 [Dataset link](https://datos.comunidad.madrid/catalogo/dataset/registro_certificados_eficiencia_energetica)  
 Contains energy ratings for buildings.  
 → Filter by “Madrid” and join with district shapefiles to estimate heating demand.
-- df_ceee Shape: `(115196 rows, 86 columns)`
+- df_ceee Shape: `(115196 rows, 86 columns)` cleaned to `(55717 rows, 17 columns)`
 <details>
 <summary> Click here to expand PST column dictionary / Diccionario de columnas PST</summary>
   
