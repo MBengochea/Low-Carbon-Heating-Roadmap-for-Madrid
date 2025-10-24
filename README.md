@@ -164,7 +164,7 @@ Contains energy ratings for buildings.
 → Filter by “Madrid” and join with district shapefiles to estimate heating demand.
 - df_ceee Shape: `(115196 rows, 86 columns)` cleaned to `(55717 rows, 17 columns)`
 <details>
-<summary> Click here to expand PST column dictionary / Diccionario de columnas PST</summary>
+<summary> Click here to expand CEEE column dictionary / Diccionario de columnas CEEE</summary>
   
 | Column Selection | English meaning | Spanish meaning | Units | Why Keep |
 |---|---|---|---:|---|
@@ -190,10 +190,18 @@ Contains energy ratings for buildings.
 <hr>
 
 4. **Final Gas Consumption by Sector**  
-[Dataset link](https://datos.comunidad.madrid/dataset/950a60f0-498c-48db-84f4-734990d3e253)  
-Shows fossil fuel usage by sector.  
-→ Use to estimate current heating fuel dependency and model transition scenarios to low-carbon alternatives.
+[Dataset link](https://datos.comunidad.madrid/dataset/950a60f0-498c-48db-84f4-734990d3e253)  Shows fossil fuel usage by sector. → Use to estimate current heating fuel dependency and model transition scenarios to low-carbon alternatives.
+
 - df_gas Shape: `(184 rows, 7 columns)`
+<details>
+<summary> Click here to expand GAS column dictionary / Diccionario de columnas GAS</summary>
+
+| Column name                     | Type    | Meaning (EN)                                      | Significado (ES)                                      |
+|--------------------------------|---------|--------------------------------------------------|--------------------------------------------------------|
+| `año`           | int64     | Reference Year                                  | Año de Referencia                              |
+| `valor`    | int64  | kilo- Tonne of Oil equivalent, 1 ktoe = 11,63 GWh | kilo toneladas equivalentes de petroleo, 1 ktep = 11,63 GWh     |
+</details>
+
 <hr>
 
 5. **Real-Time Air Quality – Madrid**  
