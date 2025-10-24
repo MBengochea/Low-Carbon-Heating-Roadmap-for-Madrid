@@ -207,6 +207,7 @@ df_air_realtime Shape:  `(126 rows, 56 columns)`
 [Dataset link](https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=1e4991bfd349b810VgnVCM1000001d4a900aRCRD)  
 Geolocated camera data and zone boundaries.  
 → Useful for mapping enforcement zones and aligning heating upgrades with air quality policies.
+df_zbe_cameras Shape:  `(465 rows, 4 columns)`
 <hr>
 
 7. **Special Low Emission Zones – ZBEDEP Centro**  
@@ -221,13 +222,12 @@ Provides official district boundaries.
 → Essential for spatial joins and mapping emissions, heating demand, and retrofit scenarios by district.
 <hr>
 
-<!--
+
 9. **3D Building Models – Geoportal Madrid**  
 [Dataset link](https://geoportal.madrid.es/IDEAM_WBGEOPORTAL/dataset.iam?id=ece2d15a-d16f-46e8-aaec-9576771b9997)  
 High-resolution 3D geometry grouped by district.  
 → Use to visualize top 20% emission districts in 3D and overlay thematic data like retrofit cost or emissions gap closure.
 <hr>
--->
 
 10. **Heating Technology Specs – Spain (IDAE, Eurostat, JRC, REE)**  
 `data/tech_specs/heating_technologies.csv`  
@@ -242,3 +242,9 @@ Sources include:
 - [Eurostat Energy Balances – Gas Boilers Spain](https://ec.europa.eu/eurostat/web/energy/data/energy-balances)
 - [REE National Statistical Series- Biomass Boilers Spain](https://www.ree.es/en/datos/publications/national-statistical-series)
 <hr>
+
+11. **Avg. Income per postal Code – Spain (Agencia Tributaria)**  
+`data/stakeholders/renta_media_madrid.csv` [Source](https://sede.agenciatributaria.gob.es/AEAT/Contenidos_Comunes/La_Agencia_Tributaria/Estadisticas/Publicaciones/sites/irpfCodPostal/2023/home.html)
+<hr>
+
+12. **Stakeholder Map**
