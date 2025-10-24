@@ -205,10 +205,55 @@ Contains energy ratings for buildings.
 <hr>
 
 5. **Real-Time Air Quality – Madrid**  
-[Dataset link](https://ciudadesabiertas.madrid.es/dynamicAPI/API/query/calair_tiemporeal.json?pageSize=5000)  
-Live pollution data by station.  
+[Dataset link](https://ciudadesabiertas.madrid.es/dynamicAPI/API/query/calair_tiemporeal.json?pageSize=5000) Live pollution data by station.  
 → Use to validate the impact of heating interventions on air quality and correlate with emissions zones.
-df_air_realtime Shape:  `(126 rows, 56 columns)`
+
+- df_air_realtime Shape:  `(126 rows, 56 columns)`
+<details>
+<summary> Click here to expand AIR_REALTIME column dictionary / Diccionario de columnas AIR_REALTIME</summary>
+
+| Field            | English Description                                      | Descripción en Español                                      |
+|------------------|----------------------------------------------------------|--------------------------------------------------------------|
+| `provincia`      | Province code (always 28 for Madrid)                     | Código de provincia (siempre 28 para Madrid)                 |
+| `municipio`      | Municipality code (always 079 for Madrid city)           | Código del municipio (siempre 079 para Madrid capital)       |
+| `estacion`       | Station code (e.g., 004 = Plaza de España)               | Código de estación (ej. 004 = Plaza de España)               |
+| `magnitud`       | Pollutant code (e.g., 08 = NO₂, 10 = PM10)               | Código de contaminante (ej. 08 = NO₂, 10 = PM10)             |
+| `punto_muestreo` | Sampling point ID: province + municipality + station + pollutant + technique | ID del punto de muestreo: provincia + municipio + estación + magnitud + técnica |
+| `ano`            | Year of measurement (4 digits)                           | Año de medición (4 cifras)                                   |
+| `mes`            | Month (1–12)                                             | Mes (1–12)                                                   |
+| `dia`            | Day of month (1–31)                                      | Día del mes (1–31)                                           |
+| `h01`–`h24`      | Hourly value of pollutant (e.g., µg/m³ or mg/m³)         | Valor horario del contaminante (ej. µg/m³ o mg/m³)           |
+| `v01`–`v24`      | Validation code for each hour (see below)                | Código de validación por hora (ver abajo)                    |
+
+## Validation Codes (`vXX`)
+
+| Code | English Meaning               | Significado en Español                  |
+|------|-------------------------------|------------------------------------------|
+| `V`  | Validated                     | Validado                                 |
+| `N`  | Not valid                     | No válido                                |
+| `P`  | Pending validation            | Pendiente de validación                  |
+| `F`  | Missing data                  | Falta de datos                           |
+| `S`  | Substituted (estimated)       | Sustituido por estimación                |
+
+## Common Pollutant Codes (`magnitud`)
+
+| Code | Pollutant (EN)               | Contaminante (ES)             | Unit        |
+|------|------------------------------|-------------------------------|-------------|
+| 01   | Sulfur Dioxide (SO₂)         | Dióxido de Azufre (SO₂)       | µg/m³       |
+| 06   | Carbon Monoxide (CO)         | Monóxido de Carbono (CO)      | mg/m³       |
+| 07   | Nitric Oxide (NO)            | Monóxido de Nitrógeno (NO)    | µg/m³       |
+| 08   | Nitrogen Dioxide (NO₂)       | Dióxido de Nitrógeno (NO₂)    | µg/m³       |
+| 09   | PM2.5                        | Partículas < 2.5 µm (PM2.5)    | µg/m³       |
+| 10   | PM10                         | Partículas < 10 µm (PM10)      | µg/m³       |
+| 12   | Nitrogen Oxides (NOx)        | Óxidos de Nitrógeno (NOx)     | µg/m³       |
+| 14   | Ozone (O₃)                   | Ozono (O₃)                     | µg/m³       |
+| 20   | Toluene                      | Tolueno                        | µg/m³       |
+| 30   | Benzene                      | Benceno                        | µg/m³       |
+| 42   | Total Hydrocarbons (Hexane) | Hidrocarburos totales (hexano)| mg/m³       |
+| 43   | Methane (CH₄)               | Metano (CH₄)                   | mg/m³       |
+| 44   | Non-methane Hydrocarbons    | Hidrocarburos no metánicos    | mg/m³       |
+
+</details>
 <hr>
 
 6. **Low Emission Zone Cameras – Madrid ZBE**  
