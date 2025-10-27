@@ -2,20 +2,59 @@ defaults:
   encoding: latin1
   separator: ;
   shapefile_crs: EPSG:4326
+
 paths:
   dashboard: dashboard/
   figures: figures/
   notebooks: notebooks/
   raw_data: data/raw/
-  scripts: src/
+  clean_data: data/clean/
   spatial_data: data/spatial/
+  stakeholders: data/stakeholders/
+  tech_specs: data/tech_specs/
+  scripts: src/
   sql_scripts: sql/
+
 provenance:
-- file: camaras_mc_clean.csv
-  rows: 115
-- file: zbe_lpr_clean.csv
-  rows: 465
-- file: camaras_mc_clean.csv
-  rows: 115
-- file: zbe_lpr_clean.csv
-  rows: 465
+  # Cleaned datasets
+  - file: data/clean/camaras_mc_clean.csv
+    rows: 115
+  - file: data/clean/zbe_lpr_clean.csv
+    rows: 465
+  - file: data/clean/ceee.csv
+    rows: null
+  - file: data/clean/gas.csv
+    rows: null
+  - file: data/clean/gei.csv
+    rows: null
+  - file: data/clean/pst.csv
+    rows: null
+
+  # Raw datasets
+  - file: data/raw/camaras_mc.csv
+    rows: null
+  - file: data/raw/zbe_lpr.csv
+    rows: null
+
+  # Stakeholder data
+  - file: data/stakeholders/renta_media_madrid.csv
+    rows: null
+  - file: data/stakeholders/stakeholder_map.csv
+    rows: null
+
+  # Technical specifications
+  - file: data/tech_specs/heating_technologies.csv
+    rows: null
+
+  # Spatial data (shapefiles)
+  - file: data/spatial/Madrid_Central/Madrid_Central.shp
+    rows: null
+  - file: data/spatial/PANEL_HOGARES/PANEL_HOGARES.shp
+    rows: null
+  - file: data/spatial/ZBE_MADRID/ZBE_MADRID_CAMARAS.shp
+    rows: null
+  - file: data/spatial/ZBE_MADRID/ZBE_MADRID_FOTO_ROJOS.shp
+    rows: null
+  - file: data/spatial/ZBE_MADRID/ZBE_TM.shp
+    rows: null
+

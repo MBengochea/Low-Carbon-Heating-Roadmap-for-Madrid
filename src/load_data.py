@@ -16,7 +16,7 @@ def _std(df): df = df.copy(); df.columns = [str(c).lower().strip().replace(" ", 
 def _light(df): return df.copy()
 
 # guarda CSV limpio / save cleaned CSV
-def save_clean(df, name): out = CLEAN / name; df.to_csv(out, index=False, encoding="utf-8-sig" ); return out
+def save_clean(df, name): out = CLEAN / name; df.to_csv(out, index=False, encoding="utf-8", lineterminator="\n") ; return out
 
 # carga desde CKAN / load from CKAN
 def fetch_ckan_csv(id, sep=";", enc="latin1", low_memory=True):
