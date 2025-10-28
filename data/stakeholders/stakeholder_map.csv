@@ -1,1 +1,7 @@
-
+actor,influence,interest,decision,levers
+IDAE,High,High,subsidies, mandates
+Ayuntamiento Madrid,High,High,zoning, district heating infrastructure
+Housing Coops,Medium,High,retrofit access, collective bargaining
+Citizens,Low,High,adoption choice, awareness
+Utilities,High,Medium,grid capacity, tariffs
+Tech Providers,Medium,Medium,technology cost, supply chain

@@ -1,6 +1,6 @@
 defaults:
-  encoding: latin1
-  separator: ;
+  encoding: utf-8
+  separator: ","
   shapefile_crs: EPSG:4326
 
 paths:
@@ -25,7 +25,9 @@ provenance:
     rows: null
   - file: data/clean/gas.csv
     rows: null
-  - file: data/clean/gei.csv
+  - file: data/clean/df_gei.csv
+    rows: null
+  - file: data/clean/pareto.csv
     rows: null
   - file: data/clean/pst.csv
     rows: null
@@ -47,14 +49,8 @@ provenance:
     rows: null
 
   # Spatial data (shapefiles)
-  - file: data/spatial/Madrid_Central/Madrid_Central.shp
+  - file: data/spatial/Distritos/DISTRITOS.shp
     rows: null
-  - file: data/spatial/PANEL_HOGARES/PANEL_HOGARES.shp
-    rows: null
-  - file: data/spatial/ZBE_MADRID/ZBE_MADRID_CAMARAS.shp
-    rows: null
-  - file: data/spatial/ZBE_MADRID/ZBE_MADRID_FOTO_ROJOS.shp
-    rows: null
-  - file: data/spatial/ZBE_MADRID/ZBE_TM.shp
+  - file: data/spatial/postal_to_district.csv
     rows: null
 
