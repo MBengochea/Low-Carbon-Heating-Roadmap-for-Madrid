@@ -1,56 +1,51 @@
+# config.yml - Low Carbon Heating Roadmap for Madrid
+project:
+  name: Low-Carbon-Heating-Roadmap-for-Madrid
+  owner: MBengochea
+  contact: ""
+
+data:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  artifacts_dir: artifacts
+  audit_dir: data/ingest_audit
+
 defaults:
-  encoding: utf-8
-  separator: ","
-  shapefile_crs: EPSG:4326
+  adoption_rate_default: 0.30         # default adoption rate if missing
+  priority_districts: [10, 11, 12, 13, 15]  # Latina, Carabanchel, Usera, Puente, Ciudad Jardín
+  currency: "EUR"
+  money_format: "€{value:,.0f}"       # formatting applied by src/formatting
+  co2_unit: "tons/yr"
 
-paths:
-  dashboard: dashboard/
-  figures: figures/
-  notebooks: notebooks/
-  raw_data: data/raw/
-  clean_data: data/clean/
-  spatial_data: data/spatial/
-  stakeholders: data/stakeholders/
-  tech_specs: data/tech_specs/
-  scripts: src/
-  sql_scripts: sql/
+optimization:
+  solver: "greedy"                    # options: greedy, lp_relaxed, mip (recommend mip for final)
+  budget_eur_default: 90000000
+  capex_subsidy_pct_default: 0.0
+  opex_factor_default: 1.0
+  co2_factor_default: 1.0
+  priority_first: true
 
-provenance:
-  # Cleaned datasets
-  - file: data/clean/camaras_mc_clean.csv
-    rows: 115
-  - file: data/clean/zbe_lpr_clean.csv
-    rows: 465
-  - file: data/clean/ceee.csv
-    rows: null
-  - file: data/clean/gas.csv
-    rows: null
-  - file: data/clean/df_gei.csv
-    rows: null
-  - file: data/clean/pareto.csv
-    rows: null
-  - file: data/clean/pst.csv
-    rows: null
+modeling:
+  random_seed: 42
+  train_val_test_split: [0.6, 0.2, 0.2]
+  candidate_models:
+    - "logistic_regression"
+    - "random_forest"
+    - "xgboost"
+  metrics:
+    - "auc"
+    - "precision_at_k"
+    - "calibration_brier"
 
-  # Raw datasets
-  - file: data/raw/camaras_mc.csv
-    rows: null
-  - file: data/raw/zbe_lpr.csv
-    rows: null
+artifacts:
+  pareto_frontier: artifacts/pareto_frontier.csv
+  adoption_model_pickle: models/adoption_model.pkl
+  model_card: models/model_card.json
 
-  # Stakeholder data
-  - file: data/stakeholders/renta_media_madrid.csv
-    rows: null
-  - file: data/stakeholders/stakeholder_map.csv
-    rows: null
+git:
+  branch_strategy: "main + feature/*"
+  commit_frequency_recommendation: "daily"
 
-  # Technical specifications
-  - file: data/tech_specs/heating_technologies.csv
-    rows: null
-
-  # Spatial data (shapefiles)
-  - file: data/spatial/Distritos/DISTRITOS.shp
-    rows: null
-  - file: data/spatial/postal_to_district.csv
-    rows: null
-
+notes:
+  - "All monetary values are integers in euros in processed data; formatting for stakeholders applied at reporting stage."
+  - "Adoption rate default is configurable. Document any district-specific overrides in data/ingest_audit/*.json."
