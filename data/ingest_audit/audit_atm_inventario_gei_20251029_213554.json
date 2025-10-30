@@ -1,0 +1,46 @@
+{
+  "source": "atm_inventario_gei.csv",
+  "pull_date": "2025-10-29T21:35:54.055863Z",
+  "rows_in": 5885,
+  "rows_out": 5885,
+  "transforms": [
+    {
+      "step": "rename_and_clean_gei",
+      "renamed_columns": [
+        [
+          "inventario_gei_a\u00f1o",
+          "gei_yr"
+        ],
+        [
+          "inventario_gei_actividad_crf",
+          "gei_crf_act"
+        ],
+        [
+          "inventario_gei_contaminante",
+          "gei_pollutant"
+        ],
+        [
+          "inventario_gei_gg_co2_eq",
+          "gei_co2_eq_t"
+        ]
+      ],
+      "columns_cleaned": [
+        "gei_co2_eq_t"
+      ],
+      "sentinels_mapped": [
+        "99999999,99",
+        "99999999.99",
+        "99999999",
+        "99999999,00",
+        "NaN",
+        "nan",
+        "NULL",
+        "-"
+      ],
+      "rows_before": 5885,
+      "rows_dropped_nan": 0,
+      "rows_final": 0,
+      "rows_dropped_negatives_or_zeros": 0
+    }
+  ]
+}

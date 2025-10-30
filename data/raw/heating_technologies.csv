@@ -1,0 +1,5 @@
+tech,efficiency_cop,capex_eur_kw,opex_eur_kwh,emissions_kgco2_kwh,retrofit_ready,notes
+air_source_hp,3.2,1200,0.12,0.05,yes,Most efficient in mild climates; dominant low-carbon retrofit in Spain
+district_heating,1.0,800,0.10,0.02,partial,Depends on grid carbon intensity and network availability
+gas_boiler,0.9,600,0.09,0.23,yes,Current baseline in most Spanish homes
+biomass_boiler,0.85,1000,0.08,0.10,partial,Used in rural areas; renewable but emits particulates

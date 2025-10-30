@@ -2,13 +2,16 @@
 project:
   name: Low-Carbon-Heating-Roadmap-for-Madrid
   owner: MBengochea
-  contact: ""
+  contact: "masteramida@gmail.com"
 
 data:
   raw_dir: data/raw
   processed_dir: data/processed
   artifacts_dir: artifacts
   audit_dir: data/ingest_audit
+  sql_dir: sql/
+  figures_dir: figures/
+  notebooks_dir: notebooks/
 
 defaults:
   adoption_rate_default: 0.30         # default adoption rate if missing
@@ -16,6 +19,63 @@ defaults:
   currency: "EUR"
   money_format: "€{value:,.0f}"       # formatting applied by src/formatting
   co2_unit: "tons/yr"
+  madrid_postal_codes_official:
+    - "28001"
+    - "28002"
+    - "28003"
+    - "28004"
+    - "28005"
+    - "28006"
+    - "28007"
+    - "28008"
+    - "28009"
+    - "28010"
+    - "28011"
+    - "28012"
+    - "28013"
+    - "28014"
+    - "28015"
+    - "28016"
+    - "28017"
+    - "28018"
+    - "28019"
+    - "28020"
+    - "28021"
+    - "28022"
+    - "28023"
+    - "28024"
+    - "28025"
+    - "28026"
+    - "28027"
+    - "28028"
+    - "28029"
+    - "28030"
+    - "28031"
+    - "28032"
+    - "28033"
+    - "28034"
+    - "28035"
+    - "28036"
+    - "28037"
+    - "28038"
+    - "28039"
+    - "28040"
+    - "28041"
+    - "28042"
+    - "28043"
+    - "28044"
+    - "28045"
+    - "28046"
+    - "28047"
+    - "28048"
+    - "28049"
+    - "28050"
+    - "28051"
+    - "28052"
+    - "28053"
+    - "28054"
+    - "28055"
+    - "46005"
 
 optimization:
   solver: "greedy"                    # options: greedy, lp_relaxed, mip (recommend mip for final)
@@ -42,6 +102,29 @@ artifacts:
   adoption_model_pickle: models/adoption_model.pkl
   model_card: models/model_card.json
 
+provenance:
+  # Processed datasets
+  - file: data/clean/df_ceee.csv
+    rows: null
+  - file: data/clean/df_gei.csv
+    rows: null
+  - file: data/clean/df_pst.csv
+    rows: null
+  - file: data/clean/sql_buildings_train.csv
+    rows: null
+
+  # Raw datasets
+  - file: data/raw/Distritos/DISTRITOS.shp
+    rows: null
+  - file: data/raw/heating_technologies.csv
+    rows: null
+  - file: data/raw/postal_to_district.csv
+    rows: null
+  - file: data/raw/renta_media_madrid.csv
+    rows: null
+  - file: data/raw/stakeholder_map.csv
+    rows: null
+    
 git:
   branch_strategy: "main + feature/*"
   commit_frequency_recommendation: "daily"

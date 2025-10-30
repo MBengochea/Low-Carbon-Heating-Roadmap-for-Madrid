@@ -1,0 +1,43 @@
+{
+  "source": "emision-de-contaminantes-atmosfericos-por-sectores-particulas-en-suspension-pst.csv",
+  "pull_date": "2025-10-29T21:55:58.703899Z",
+  "rows_in": 264,
+  "rows_out": 264,
+  "transforms": [
+    {
+      "step": "rename_and_clean_pst",
+      "renamed_columns": [
+        [
+          "a\u00f1o",
+          "year"
+        ],
+        [
+          "concepto",
+          "emission_concept"
+        ],
+        [
+          "valor",
+          "tons_pst"
+        ]
+      ],
+      "columns_cleaned": [
+        "year",
+        "tons_pst"
+      ],
+      "sentinels_mapped": [
+        "99999999,99",
+        "99999999.99",
+        "99999999",
+        "99999999,00",
+        "NaN",
+        "nan",
+        "NULL",
+        "-"
+      ],
+      "rows_before": 264,
+      "rows_dropped_nan": 0,
+      "rows_final": 0,
+      "rows_dropped_negatives_or_zeros": 0
+    }
+  ]
+}
