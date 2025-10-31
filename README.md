@@ -308,3 +308,4 @@ Sources include:
 
 12. **Stakeholder Map**
 <img src="assets/stakeholders.png" alt="specs" width="450"/>
+(done with python networkx>=3.0)
