@@ -307,5 +307,6 @@ Sources include:
 <hr>
 
 12. **Stakeholder Map**
-<img src="assets/stakeholders.png" alt="specs" width="600"/>
+<img src="assets/stakeholders.png" alt="specs" width="800"/>
 (done with python networkx>=3.0)
+Self made
