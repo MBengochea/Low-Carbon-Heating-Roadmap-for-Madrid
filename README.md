@@ -36,21 +36,8 @@ Specific Objectives:
 ├── README.md
 ├── app.py
 ├── assets/
-│   ├── ayunta.madrid.png
-│   ├── co2.png
-│   ├── density.png
-│   ├── df.csv
-│   ├── emissions_map.png
-│   ├── heating_technologies_diagram.png
-│   ├── income.png
 │   ├── logreg_tuned_model.pkl
 │   ├── madrid_districts.geojson
-│   ├── optimization_problem.png
-│   ├── pareto.png
-│   ├── sql_entity_relationship_diagram.png
-│   ├── sql_entity_relationship_model.png
-│   ├── stakeholders.png
-│   └── tech_district_stats.csv
 ├── config.yml
 ├── data/
 │   ├── ingest_audit/
@@ -92,14 +79,6 @@ Specific Objectives:
 │   └── 02_buildings_train.sql
 └── src/
     ├── __init__.py
-    ├── __pycache__/
-    │   ├── __init__.cpython-313.pyc
-    │   ├── cleaning.cpython-313.pyc
-    │   ├── features.cpython-313.pyc
-    │   ├── io.cpython-313.pyc
-    │   ├── load_config.cpython-313.pyc
-    │   ├── load_data.cpython-313.pyc
-    │   └── loader.cpython-313.pyc
     ├── cleaning.py
     ├── features.py
     ├── io.py
