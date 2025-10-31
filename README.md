@@ -14,7 +14,7 @@ Specific Objectives:
 
 2. Model technology adoption: Forecast adoption trends for heat pumps, district heating, gas boilers, and biomass boilers using predictive analytics and stochastic optimization — inspired by Toyota Production System and Six Sigma principles.
 
-3. Build an interactive dashboard: Develop a Streamlit + Tableau dashboard to visualize emissions hotspots, simulate technology rollout, and present cost-benefit tradeoffs in € and % of emissions gap closed by 2030 — tailored for policymakers, citizens, and retrofit planners.
+3. Build an interactive dashboard: Develop a Streamlit to visualize emissions hotspots, simulate technology rollout, and present cost-benefit tradeoffs in € and % of emissions gap closed by 2030 — tailored for policymakers, citizens, and retrofit planners.
 
 4. Stakeholder analysis: Identify key actors, their influence, and decision levers in heating decarbonization with dashboard filters to simulate scenarios (e.g. “What if IDAE increases subsidies for heat pumps in Centro and Usera, while district heating expands in Tetuán?”).
 
@@ -86,7 +86,6 @@ Specific Objectives:
 │   ├── 04_eda.ipynb
 │   ├── 05_emissions_pareto.ipynb
 │   ├── 06_adoption_modeling.ipynb
-│   └── logreg_tuned_model.pkl
 ├── requirements.txt
 ├── sql/
 │   ├── 01_join_districts.sql
@@ -231,22 +230,7 @@ Contains energy ratings for buildings.
 
 <hr>
 
-4. **Final Gas Consumption by Sector**  
-[Dataset link](https://datos.comunidad.madrid/dataset/950a60f0-498c-48db-84f4-734990d3e253)  Shows fossil fuel usage by sector. → Use to estimate current heating fuel dependency and model transition scenarios to low-carbon alternatives.
-
-- df_gas Shape: `(184 rows, 7 columns)`
-<details>
-<summary> Click here to expand GAS column dictionary / Diccionario de columnas GAS</summary>
-
-| Column name                     | Type    | Meaning (EN)                                      | Significado (ES)                                      |
-|--------------------------------|---------|--------------------------------------------------|--------------------------------------------------------|
-| `año`           | int64     | Reference Year                                  | Año de Referencia                              |
-| `valor`    | int64  | kilo- Tonne of Oil equivalent, 1 ktoe = 11,63 GWh | kilo toneladas equivalentes de petroleo, 1 ktep = 11,63 GWh     |
-</details>
-
-<hr>
-
-5. **Real-Time Air Quality – Madrid**  
+4. **Real-Time Air Quality – Madrid**  
 [Dataset link](https://ciudadesabiertas.madrid.es/dynamicAPI/API/query/calair_tiemporeal.json?pageSize=5000) Live pollution data by station.  
 → Use to validate the impact of heating interventions on air quality and correlate with emissions zones.
 
@@ -298,36 +282,13 @@ Contains energy ratings for buildings.
 </details>
 <hr>
 
-6. **Low Emission Zone Cameras – Madrid ZBE**  
-[Dataset link](https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=1e4991bfd349b810VgnVCM1000001d4a900aRCRD)  
-Geolocated camera data and zone boundaries.  
-→ Useful for mapping enforcement zones and aligning heating upgrades with air quality policies.
-
-df_zbe_cameras Shape:  `(465 rows, 4 columns)`
-<hr>
-
-7. **Special Low Emission Zones – ZBEDEP Centro**  
-[Dataset link](https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=019f24aaef3d3610VgnVCM1000001d4a900aRCRD)  
-Shapefiles for protected zones.  
-→ Use to overlay retrofit priorities and visualize policy-aligned intervention areas.
-
-df_zbe_zones Shape:  `(115 rows, 14 columns)`
-<hr>
-
-8. **District-Level Shapefiles – Geoportal Madrid**  
+5. **District-Level Shapefiles – Geoportal Madrid**  
 [Dataset link](https://geoportal.madrid.es/IDEAM_WBGEOPORTAL/descargasDisponibles.iam?fileIdent=aebec21d-5cad-11f0-9f8c-9009dfd270e9)  
 Provides official district boundaries.  
 → Essential for spatial joins and mapping emissions, heating demand, and retrofit scenarios by district.
 <hr>
 
-
-9. **3D Building Models – Geoportal Madrid**  
-[Dataset link](https://geoportal.madrid.es/IDEAM_WBGEOPORTAL/dataset.iam?id=ece2d15a-d16f-46e8-aaec-9576771b9997)  
-High-resolution 3D geometry grouped by district.  
-→ Use to visualize top 20% emission districts in 3D and overlay thematic data like retrofit cost or emissions gap closure.
-<hr>
-
-10. **Heating Technology Specs – Spain (IDAE, Eurostat, JRC, REE)**  
+6. **Heating Technology Specs – Spain (IDAE, Eurostat, JRC, REE)**  
 `data/tech_specs/heating_technologies.csv`  
 Contains real-world cost, efficiency, and emissions data for four key heating technologies in Spain: air-source heat pumps, district heating, gas boilers, and biomass boilers.  
 → Used for scenario modeling, cost-benefit analysis, and emissions gap closure simulations.  
@@ -341,8 +302,9 @@ Sources include:
 - [REE National Statistical Series- Biomass Boilers Spain](https://www.ree.es/en/datos/publications/national-statistical-series)
 <hr>
 
-11. **Avg. Income per postal Code – Spain (Agencia Tributaria)**  
+7. **Avg. Income per postal Code – Spain (Agencia Tributaria)**  
 `data/stakeholders/renta_media_madrid.csv` [Source](https://sede.agenciatributaria.gob.es/AEAT/Contenidos_Comunes/La_Agencia_Tributaria/Estadisticas/Publicaciones/sites/irpfCodPostal/2023/home.html)
 <hr>
 
 12. **Stakeholder Map**
+<img src="assets/stakeholders.png" alt="specs" width="450"/>
