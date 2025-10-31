@@ -331,7 +331,7 @@ High-resolution 3D geometry grouped by district.
 `data/tech_specs/heating_technologies.csv`  
 Contains real-world cost, efficiency, and emissions data for four key heating technologies in Spain: air-source heat pumps, district heating, gas boilers, and biomass boilers.  
 → Used for scenario modeling, cost-benefit analysis, and emissions gap closure simulations.  
-<img src="figures/heating_technologies_diagram.png" alt="specs" width="450"/>
+<img src="assets/heating_technologies_diagram.png" alt="specs" width="450"/>
 (done with python schemdraw>=0.15)
 
 Sources include:
