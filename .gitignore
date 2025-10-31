@@ -4,7 +4,9 @@ notebooks/.ipynb_checkpoints/
 
 # Python environment and cache
 .venv/
-__pycache__/
+
+# Ignore Python cache folders inside src
+/src/__pycache__/
 
 # Environment variables
 .env
