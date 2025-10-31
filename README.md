@@ -34,35 +34,77 @@ Specific Objectives:
 ```
 ├── .gitignore
 ├── README.md
+├── app.py
+├── assets/
+│   ├── ayunta.madrid.png
+│   ├── co2.png
+│   ├── density.png
+│   ├── df.csv
+│   ├── emissions_map.png
+│   ├── heating_technologies_diagram.png
+│   ├── income.png
+│   ├── logreg_tuned_model.pkl
+│   ├── madrid_districts.geojson
+│   ├── optimization_problem.png
+│   ├── pareto.png
+│   ├── sql_entity_relationship_diagram.png
+│   ├── sql_entity_relationship_model.png
+│   ├── stakeholders.png
+│   └── tech_district_stats.csv
 ├── config.yml
-├── dashboard/ # streamlit app
-│   ├── app.py
-│   ├── assets/
-│   └── components/
 ├── data/
-│   ├── clean/ # after python cleaning
-│   ├── raw/ # raw csv
-│   ├── spatial/ # need it for maps and geo locations
-│   ├── stakeholders/ # csv 
-│   └── tech_specs/ # csv of specs for air pumps, distric heating, bio and gas boilers
-├── figures/
+│   ├── ingest_audit/
+│   │   ├── audit_atm_inventario_gei_20251029_213554.json
+│   │   ├── audit_emision-de-contaminantes-atmosfericos-por-sectores-particulas-en-suspension-pst_20251029_215558.json
+│   │   └── audit_registro_certificados_eficiencia_energetica_2025_20251029_213722.json
+│   ├── processed/
+│   │   ├── df_ceee.csv
+│   │   ├── df_gei.csv
+│   │   ├── df_pst.csv
+│   │   ├── heating_technologies.csv
+│   │   ├── sql_buildings_train.csv
+│   │   ├── sql_query_pareto_flag.csv
+│   │   └── stakeholder_map.csv
+│   └── raw/
+│       ├── Distritos/
+│       │   ├── DISTRITOS.cpg
+│       │   ├── DISTRITOS.dbf
+│       │   ├── DISTRITOS.prj
+│       │   ├── DISTRITOS.sbn
+│       │   ├── DISTRITOS.sbx
+│       │   ├── DISTRITOS.shp
+│       │   ├── DISTRITOS.shp.xml
+│       │   └── DISTRITOS.shx
+│       ├── heating_technologies.csv
+│       ├── postal_to_district.csv
+│       ├── renta_media_madrid.csv
+│       └── stakeholder_map.csv
 ├── notebooks/
-│   ├── 00_data_cleaning.ipynb  # call loaded datasets for pandas inspection and cleaning 
-│   ├── 01_emissions_pareto.ipynb
-│   ├── 02_adoption_modeling.ipynb
-│   ├── 03_dashboard_prototype.ipynb
-│   └── 04_stakeholder_analysis.ipynb
+│   ├── 01_collection_wrangling_gei.ipynb
+│   ├── 02_collection_wrangling_pst.ipynb
+│   ├── 03_collection_wrangling_ceee.ipynb
+│   ├── 04_eda.ipynb
+│   ├── 05_emissions_pareto.ipynb
+│   ├── 06_adoption_modeling.ipynb
+│   └── logreg_tuned_model.pkl
 ├── requirements.txt
 ├── sql/
-│   ├── filter_retrofit_ready.sql
-│   ├── join_districts.sql
-│   └── load_emissions.sql
+│   ├── 01_join_districts.sql
+│   └── 02_buildings_train.sql
 └── src/
-    ├── load_data.py  # loads all datasets csv or API, lowercase columns and let ready for use in notebooks 
-    ├── model_adoption.py
-    ├── pareto_analysis.py
-    ├── stakeholder_model.py
-    └── utils.py
+    ├── __init__.py
+    ├── __pycache__/
+    │   ├── __init__.cpython-313.pyc
+    │   ├── cleaning.cpython-313.pyc
+    │   ├── features.cpython-313.pyc
+    │   ├── io.cpython-313.pyc
+    │   ├── load_config.cpython-313.pyc
+    │   ├── load_data.cpython-313.pyc
+    │   └── loader.cpython-313.pyc
+    ├── cleaning.py
+    ├── features.py
+    ├── io.py
+    └── loader.py
 ```
 ---
 ## Quick Start
