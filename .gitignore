@@ -1,8 +1,19 @@
+# Jupyter and notebook artifacts
 .ipynb_checkpoints/
-.venv/
-.env
 notebooks/.ipynb_checkpoints/
+
+# Python environment and cache
+.venv/
+__pycache__/
+
+# Environment variables
+.env
 notebooks/.env
-notebooks/.DS_Store
+
+# macOS system files
 .DS_Store
+notebooks/.DS_Store
+
+# Input spec files
 *.in
+
