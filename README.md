@@ -12,7 +12,7 @@ Design a practical roadmap to evaluate how Madrid can adopt low-carbon heating s
 Specific Objectives:
 1. Identify priority zones: Analyze historical emissions using public datasets and apply Pareto analysis to find the top 20% of districts responsible for 80% of heating-related emissions. Prioritize zones based on emissions intensity and socio-economic vulnerability.
 
-2. Model technology adoption: Forecast adoption trends for heat pumps, district heating, gas boilers, and biomass boilers using predictive analytics and stochastic optimization — inspired by Toyota Production System and Six Sigma principles.
+2. Model technology adoption by DMAIC: Forecast adoption trends for heat pumps, district heating, gas boilers, and biomass boilers using predictive analytics and stochastic optimization — inspired by Toyota Production System and Six Sigma principles.
 
 3. Build an interactive dashboard: Develop a Streamlit to visualize emissions hotspots, simulate technology rollout, and present cost-benefit tradeoffs in € and % of emissions gap closed by 2030 — tailored for policymakers, citizens, and retrofit planners.
 
@@ -160,7 +160,7 @@ If you're a Windows user type:
 uv pip install -r requirements.txt
 ```
 ---
-## **Data Sources**
+## **Data Sources (audit json's of cleanings in data/ingest_audit **
 
 1. **Greenhouse Gas Emissions Inventory – Comunidad de Madrid**  
 [Dataset link](https://datos.comunidad.madrid/dataset/atm_inventario_gei) Provides sectoral greenhouse gas emissions data across the region from 1990 onward. Useful for identifying high-emission zones and quantifying heating-related emissions for Pareto analysis.  
