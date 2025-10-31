@@ -85,7 +85,7 @@ Specific Objectives:
 │   ├── 03_collection_wrangling_ceee.ipynb
 │   ├── 04_eda.ipynb
 │   ├── 05_emissions_pareto.ipynb
-│   ├── 06_adoption_modeling.ipynb
+│   └── 06_adoption_modeling.ipynb
 ├── requirements.txt
 ├── sql/
 │   ├── 01_join_districts.sql
