@@ -12,13 +12,13 @@ Design a practical roadmap to evaluate how Madrid can adopt low-carbon heating s
 Specific Objectives:
 1. Identify priority zones: Analyze historical emissions using public datasets and apply Pareto analysis to find the top 20% of districts responsible for 80% of heating-related emissions. Prioritize zones based on emissions intensity and socio-economic vulnerability.
 
-2. Model technology adoption by DMAIC: Forecast adoption trends for heat pumps, district heating, gas boilers, and biomass boilers using predictive analytics and stochastic optimization — inspired by Toyota Production System and Six Sigma principles.
+2. Model technology adoption by DMAIC: Forecast adoption trends in Madrid districts based of current ceritifcates of buildings, for heat pumps, district heating, gas boilers, and biomass boilers using predictive analytics and stochastic optimization — inspired by Toyota Production System and Six Sigma principles.
 
-3. Build an interactive dashboard: Develop a Streamlit to visualize emissions hotspots, simulate technology rollout, and present cost-benefit tradeoffs in € and % of emissions gap closed by 2030 — tailored for policymakers, citizens, and retrofit planners.
+3. Build an interactive dashboard: Develop a Streamlit to visualize emissions hotspots, simulate technology rollout, and present cost-benefit tradeoffs in € and % of emissions gap closed by a municipal budget — tailored for policymakers, citizens, and retrofit planners.
 
-4. Stakeholder analysis: Identify key actors, their influence, and decision levers in heating decarbonization with dashboard filters to simulate scenarios (e.g. “What if IDAE increases subsidies for heat pumps in Centro and Usera, while district heating expands in Tetuán?”).
+4. Stakeholder analysis: Identify key actors, their influence, and decision levers in heating decarbonization with dashboard filters to simulate scenarios (e.g. “A 20% CAPEX subsidy increases CO₂ reduction by ≥10% for districts Centro and Usera or Tetuán?”).
 
-## Streamlit App
+## Streamlit App Here !
 
 (https://mbengochea-low-carbon-heating-roadmap-for-madrid-app-nahom1.streamlit.app/)
    
