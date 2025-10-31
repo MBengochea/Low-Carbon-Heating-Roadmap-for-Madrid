@@ -190,7 +190,7 @@ def main():
         - Final heating energy use (kWh/m²·year)  
         - Non-renewable CO₂ emissions intensity (kg/m²·year)  
         - Average household income (€)  
-        - Retrofit readiness and associated costs  
+        - Retrofit readiness and associated costs is a FE  
         """)
 
         # Analyze
@@ -240,99 +240,99 @@ def main():
     with tabs[6]:
         st.header("(C) Control")
 
-    # --- Scenario inputs ---
-    budget = st.number_input("Budget (EUR)", min_value=0, value=50_000_000, step=1_000_000)
-    subsidy_pct = st.slider("Subsidy % CAPEX", 0, 100, 0)
-    opex_factor = st.number_input("OPEX ×", min_value=0.0, value=1.0, step=0.1, format="%.2f")
-    co2_factor = st.number_input("CO₂ ×", min_value=0.0, value=1.0, step=0.05, format="%.2f")
+        # --- Scenario inputs ---
+        budget = st.number_input("Budget (EUR)", min_value=0, value=50_000_000, step=1_000_000)
+        subsidy_pct = st.slider("Subsidy % CAPEX", 0, 100, 0)
+        opex_factor = st.number_input("OPEX ×", min_value=0.0, value=1.0, step=0.1, format="%.2f")
+        co2_factor = st.number_input("CO₂ ×", min_value=0.0, value=1.0, step=0.05, format="%.2f")
 
-    # --- Load your real data ---
-    df = pd.read_csv("assets/df.csv")
+        # --- Load your real data ---
+        df = pd.read_csv("assets/df.csv")
 
-    # Adoption rates (fill missing with default 0.3)
-    adoption_rates = {10:0.420, 11:0.437, 12:0.437, 13:0.345, 15:0.343}
-    df["adoption_rate"] = df["district_id"].map(adoption_rates).fillna(0.3)
+        # Adoption rates (fill missing with default 0.3)
+        adoption_rates = {10:0.420, 11:0.437, 12:0.437, 13:0.345, 15:0.343}
+        df["adoption_rate"] = df["district_id"].map(adoption_rates).fillna(0.3)
 
-    # Apply scenario levers
-    df["OPEX"] = df.get("OPEX", 0) * opex_factor
-    df["expected_capex_eur_subsidized"] = df["expected_capex_eur"] * (1 - subsidy_pct/100)
-    df["total_cost"] = df["expected_capex_eur_subsidized"] + df["OPEX"]
-    df["weighted_saving"] = df["expected_saving_kg"] * df["adoption_rate"] * co2_factor
+        # Apply scenario levers
+        df["OPEX"] = df.get("OPEX", 0) * opex_factor
+        df["expected_capex_eur_subsidized"] = df["expected_capex_eur"] * (1 - subsidy_pct/100)
+        df["total_cost"] = df["expected_capex_eur_subsidized"] + df["OPEX"]
+        df["weighted_saving"] = df["expected_saving_kg"] * df["adoption_rate"] * co2_factor
 
-    # --- Priority-first greedy selection ---
-    priority = [10,11,12,13,15]
-    others = sorted(set(df["district_id"]) - set(priority))
+        # --- Priority-first greedy selection ---
+        priority = [10,11,12,13,15]
+        others = sorted(set(df["district_id"]) - set(priority))
 
-    selected = []
-    budget_left = budget
+        selected = []
+        budget_left = budget
 
-    # Always include priority if budget allows
-    for d in priority:
-        cand = df[df["district_id"]==d].sort_values("total_cost")
-        if not cand.empty:
-            row = cand.iloc[0]
-            if row["total_cost"] <= budget_left:
-                selected.append(row)
-                budget_left -= row["total_cost"]
+        # Always include priority if budget allows
+        for d in priority:
+            cand = df[df["district_id"]==d].sort_values("total_cost")
+            if not cand.empty:
+                row = cand.iloc[0]
+                if row["total_cost"] <= budget_left:
+                    selected.append(row)
+                    budget_left -= row["total_cost"]
 
-    # Then greedy by district ID
-    for d in others:
-        cand = df[df["district_id"]==d].sort_values("total_cost")
-        if not cand.empty:
-            row = cand.iloc[0]
-            if row["total_cost"] <= budget_left:
-                selected.append(row)
-                budget_left -= row["total_cost"]
+        # Then greedy by district ID
+        for d in others:
+            cand = df[df["district_id"]==d].sort_values("total_cost")
+            if not cand.empty:
+                row = cand.iloc[0]
+                if row["total_cost"] <= budget_left:
+                    selected.append(row)
+                    budget_left -= row["total_cost"]
 
-    sel_df = pd.DataFrame(selected)
+        sel_df = pd.DataFrame(selected)
 
     # --- Format output ---
-    sel_df["co2_emissions_reduce"] = (sel_df["weighted_saving"]/1000).round(0)
-    sel_df["cost"] = sel_df["total_cost"].round(0)
+        sel_df["co2_emissions_reduce"] = (sel_df["weighted_saving"]/1000).round(0)
+        sel_df["cost"] = sel_df["total_cost"].round(0)
 
-    def fmt_money(x): return f"€{x:,.0f}".replace(",",".")
-    def fmt_co2(x): return f"{int(x):,}".replace(",",".")+" tons/yr"
+        def fmt_money(x): return f"€{x:,.0f}".replace(",",".")
+        def fmt_co2(x): return f"{int(x):,}".replace(",",".")+" tons/yr"
 
-    report = sel_df[["district_id","tech","adoption_rate","co2_emissions_reduce","cost"]].copy()
-    report["co2_emissions_reduce"] = report["co2_emissions_reduce"].apply(fmt_co2)
-    report["cost"] = report["cost"].apply(fmt_money)
+        report = sel_df[["district_id","tech","adoption_rate","co2_emissions_reduce","cost"]].copy()
+        report["co2_emissions_reduce"] = report["co2_emissions_reduce"].apply(fmt_co2)
+        report["cost"] = report["cost"].apply(fmt_money)
 
-    total_cost = fmt_money(sel_df["total_cost"].sum())
-    total_saving = fmt_co2(sel_df["co2_emissions_reduce"].sum())
-    summary_row = pd.DataFrame([{
+        total_cost = fmt_money(sel_df["total_cost"].sum())
+        total_saving = fmt_co2(sel_df["co2_emissions_reduce"].sum())
+        summary_row = pd.DataFrame([{
         "district_id":"TOTAL","tech":"—","adoption_rate":"—",
         "co2_emissions_reduce": total_saving,"cost": total_cost
-    }])
-    report = pd.concat([report, summary_row], ignore_index=True)
+        }])
+        report = pd.concat([report, summary_row], ignore_index=True)
 
-    st.subheader("Greedy rollout under budget")
-    st.dataframe(report, use_container_width=True)
-    st.metric("Total cost", total_cost)
-    st.metric("Annual CO₂ reduced", total_saving)
+        st.subheader("Greedy rollout under budget")
+        st.dataframe(report, use_container_width=True)
+        st.metric("Total cost", total_cost)
+        st.metric("Annual CO₂ reduced", total_saving)
 
     # --- Map view with st.map ---
     # You need a centroids table with lat/lon for each district
-    centroids = pd.DataFrame({
-        "district_id":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21],
-        "lat":[40.42,40.40,40.41,40.43,40.45,40.47,40.44,40.50,40.46,
+        centroids = pd.DataFrame({
+            "district_id":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21],
+            "lat":[40.42,40.40,40.41,40.43,40.45,40.47,40.44,40.50,40.46,
                40.39,40.37,40.36,40.38,40.41,40.35,40.48,40.34,40.35,
                40.37,40.44,40.49],
-        "lon":[-3.70,-3.69,-3.68,-3.67,-3.68,-3.70,-3.71,-3.74,-3.72,
+            "lon":[-3.70,-3.69,-3.68,-3.67,-3.68,-3.70,-3.71,-3.74,-3.72,
                -3.75,-3.72,-3.70,-3.67,-3.65,-3.63,-3.64,-3.69,-3.66,
                -3.61,-3.60,-3.62]
-    })
+        })
 
-    agg = sel_df.groupby("district_id", as_index=False).agg(
-        co2_tons=("weighted_saving", lambda s: s.sum()/1000.0),
-        cost_eur=("total_cost","sum")
-    )
-    agg = agg.merge(centroids, on="district_id", how="left")
+        agg = sel_df.groupby("district_id", as_index=False).agg(
+            co2_tons=("weighted_saving", lambda s: s.sum()/1000.0),
+            cost_eur=("total_cost","sum")
+        )
+        agg = agg.merge(centroids, on="district_id", how="left")
 
-    st.subheader("Map of selected districts")
-    map_df = agg.rename(columns={"lat":"latitude","lon":"longitude"})[["latitude","longitude"]].dropna()
-    if not map_df.empty:
-        st.map(map_df)
-    else:
-        st.info("No coordinates available to plot map")
+        st.subheader("Map of selected districts")
+        map_df = agg.rename(columns={"lat":"latitude","lon":"longitude"})[["latitude","longitude"]].dropna()
+        if not map_df.empty:
+            st.map(map_df)
+        else:
+            st.info("No coordinates available to plot map")
 if __name__ == "__main__":
     main()
