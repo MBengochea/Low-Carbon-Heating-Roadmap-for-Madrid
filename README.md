@@ -143,69 +143,57 @@ uv pip install -r requirements.txt
 ## **Data Sources (audit json's of cleanings in data/ingest_audit)**
 
 1. **Greenhouse Gas Emissions Inventory – Comunidad de Madrid**  
-[Dataset link](https://datos.comunidad.madrid/dataset/atm_inventario_gei) Provides sectoral greenhouse gas emissions data across the region from 1990 onward. Useful for identifying high-emission zones and quantifying heating-related emissions for Pareto analysis.  
+[Dataset link](https://datos.comunidad.madrid/dataset/atm_inventario_gei) Provides sectoral greenhouse gas emissions data across the region from 1990 onward.
 - df_gei Shape: `(5885 rows, 6 columns)`
 <details>
-<summary> Click here to expand GEI column dictionary / Diccionario de columnas GEI</summary>
+<summary> Click here to expand GEI column dictionary</summary>
 
-| Column name                     | Type    | Meaning (EN)                                      | Significado (ES)                                      |
-|--------------------------------|---------|--------------------------------------------------|--------------------------------------------------------|
-| `inventario_gei_año`           | int     | Reference Year                                   | Año de referencia                                     |
-| `inventario_gei_sector_crf`    | object  | CRF sector                                       | Sector CRF desde el que se emite el contaminante      |
-| `inventario_gei_categoria_crf` | object  | CRF category                                     | Categoría CRF desde la que se emite el contaminante   |
-| `inventario_gei_actividad_crf` | object  | CRF activity                                     | Actividad CRF desde la que se emite el contaminante   |
-| `inventario_gei_contaminante`  | object  | Greenhouse gas type                              | Tipo de gas de efecto invernadero                     |
-| `inventario_gei_gg_co2_eq`     | object  | Emissions in CO₂ equivalent (Gg CO₂-eq)          | Emisiones en Gg equivalentes de CO₂                   |
+| Column name                     | Type    | Meaning                                       | 
+|--------------------------------|---------|--------------------------------------------------|
+| `inventario_gei_año`           | int     | Reference Year                                   | 
+| `inventario_gei_sector_crf`    | object  | CRF sector emmiting the gas                      | 
+| `inventario_gei_categoria_crf` | object  | CRF category emmiting                            | 
+| `inventario_gei_actividad_crf` | object  | CRF activity emmiting                            | 
+| `inventario_gei_contaminante`  | object  | Greenhouse gas type                              |
+| `inventario_gei_gg_co2_eq`     | object  | Emissions in CO₂ equivalent (Gg CO₂-eq)          |
 </details>
 
 <hr>
 
 2. **Emissions by Sector – Particulate Matter (PST)**  
-[Dataset link](https://datos.comunidad.madrid/dataset/1911600)  Breaks down emissions by activity and pollutant type. → Supports air quality validation and helps correlate heating sources with pollution hotspots.
+[Dataset link](https://datos.comunidad.madrid/dataset/1911600)  Breaks down emissions by activity and pollutant type.
 - df_pst Shape: `(264 rows, 7 columns)`
 <details>
-<summary> Click here to expand PST column dictionary / Diccionario de columnas PST</summary>
+<summary> Click here to expand PST column dictionary </summary>
   
-| Column name           | Type     | Description (EN)                                                | Descripción (ES)                                           |
-|-----------------------|----------|------------------------------------------------------------------|-------------------------------------------------------------|
-| `año`                 | int      | Reference year                                                   | Año de referencia                                           |
-| `concepto`            | object   | Emission concept (activity + pollutant type)                    | Concepto de emisión (actividad + tipo de contaminante)      |
-| `tipo_territorio`     | object   | Territory type (e.g., municipality, region)                     | Tipo de territorio (municipio, región, etc.)                |
-| `código_territorio`   | float    | Territory code (may be missing)                                 | Código del territorio (puede faltar)                        |
-| `territorio`          | float    | Territory name (may be missing)                                 | Nombre del territorio (puede faltar)                        |
-| `valor`               | int      | Emission value in metric tons                                   | Valor de emisión en toneladas métricas                      |
-| `estado_dato`         | float    | Data status (e.g., estimated, validated; often missing)         | Estado del dato (estimado, validado; frecuentemente nulo)   |
+| Column name           | Type     | Description                                          |
+|-----------------------|----------|------------------------------------------------------------------|
+| `año`                 | int      | Reference year                                                   | 
+| `concepto`            | object   | Emission concept (activity + pollutant type)                    | 
+| `tipo_territorio`     | object   | Territory type (e.g., municipality, region)                     | 
+| `código_territorio`   | float    | Territory code (may be missing)                                 | 
+| `territorio`          | float    | Territory name (may be missing)                                 |
+| `valor`               | int      | Emission value in metric tons                                   | 
+| `estado_dato`         | float    | Data status (e.g., estimated, validated; often missing)         | 
 </details>
 
 <hr>
 
 3. **Energy Efficiency Certificates – Buildings**  
 [Dataset link](https://datos.comunidad.madrid/catalogo/dataset/registro_certificados_eficiencia_energetica)  
-Contains energy ratings for buildings.  
-→ Filter by “Madrid” and join with district shapefiles to estimate heating demand.
+Contains energy ratings for buildings. Filtered by “Madrid postal codes” and join with district shapefiles to estimate heating demand.
 - df_ceee Shape: `(115196 rows, 86 columns)` cleaned to `(55717 rows, 17 columns)`
 <details>
-<summary> Click here to expand CEEE column dictionary / Diccionario de columnas CEEE</summary>
+<summary> Click here to expand CEEE column dictionary</summary>
   
-| Column Selection | English meaning | Spanish meaning | Units | Why Keep |
+| Column Selection | meaning | Units | Why Keep |
 |---|---|---|---:|---|
-| edif_codpost | Postal code | Código postal | string(5) | Validate district membership and spatial joins |
-| edif_fecha | Certificate date | Fecha de emisión | datetime | Time dimension for trends and eligibility |
-| edif_año | Year built | Año de construcción | int | Building vintage for retrofit readiness |
-| edif_superf | Habitable surface | Superficie habitable | m2 | Normalize metrics and scale interventions |
-| edif_compac | Compactness | Compacticidad vol/sup | m3/m2 | Proxy for envelope losses and retrofit impact |
-| edif_calef | % area heated | % superficie con calefacción | % | Identify heated stock to target interventions |
-| calefac_tipo | Heating type | Tipo de calefacción | category | Core tech classification for replacement scenarios |
-| calefac_vector | Heating vector | Vector energético calefacción | category | Fuel mix to model decarbonization pathway |
-| elec_demcalef | Heating demand (DB-HE) | Demanda calefacción (DB-HE) | kWh/m2·a | Baseline heating load for Pareto and sizing |
-| final_calef | Final energy heating | Consumo final calefacción | kWh/m2·a | Direct mapping to heating energy use |
-| norenov_calef | Non-renewable heating energy | Energía no renovable calefacción | kWh/m2·a | Fossil heating baseline for emissions modelling |
-| norenov_co2calef | CO2 heating | Emisiones CO2 calefacción | kg CO2/m2·a | Primary outcome metric for heating emissions |
-| acs_tipo | Hot-water type | Tipo de ACS | category | ACS decarbonization route and sizing |
-| elec_demacs | ACS demand (DB-HE) | Demanda ACS (DB-HE) | kWh/m2·a | ACS sizing and emissions attribution |
-| cal_calefdem | Heating demand rating | Calificación demanda calefacción (A–F) | grade | Quick filter to prioritise worst performers |
-| cal_norenovglobal | Non-renewable rating global | Calificación energía no renovable (A–F) | grade | Flag poor stock for district prioritisation |
-| cal_co2global | CO2 rating global | Calificación emisiones CO2 (A–F) | grade | Communicable KPI for stakeholders |
+| edif_codpost | Postal code | string(5) | Validate district membership and spatial joins |
+| edif_superf | Habitable surface | m2 | Normalize metrics and scale interventions |
+| edif_calef | % area heated | % | Identify heated stock to target interventions |
+| elec_demcalef | Heating demand (DB-HE) | kWh/m2·year | Baseline heating load for Pareto and sizing |
+| final_calef | Final energy heating | kWh/m2·year | Direct mapping to heating energy use |
+| norenov_calef | Non-renewable heating energy | kWh/m2·year | Fossil heating baseline for emissions modelling |
 </details>
 
 <hr>
@@ -218,60 +206,58 @@ Contains energy ratings for buildings.
 <details>
 <summary> Click here to expand AIR_REALTIME column dictionary / Diccionario de columnas AIR_REALTIME</summary>
 
-| Field            | English Description                                      | Descripción en Español                                      |
-|------------------|----------------------------------------------------------|--------------------------------------------------------------|
-| `provincia`      | Province code (always 28 for Madrid)                     | Código de provincia (siempre 28 para Madrid)                 |
-| `municipio`      | Municipality code (always 079 for Madrid city)           | Código del municipio (siempre 079 para Madrid capital)       |
-| `estacion`       | Station code (e.g., 004 = Plaza de España)               | Código de estación (ej. 004 = Plaza de España)               |
-| `magnitud`       | Pollutant code (e.g., 08 = NO₂, 10 = PM10)               | Código de contaminante (ej. 08 = NO₂, 10 = PM10)             |
-| `punto_muestreo` | Sampling point ID: province + municipality + station + pollutant + technique | ID del punto de muestreo: provincia + municipio + estación + magnitud + técnica |
-| `ano`            | Year of measurement (4 digits)                           | Año de medición (4 cifras)                                   |
-| `mes`            | Month (1–12)                                             | Mes (1–12)                                                   |
-| `dia`            | Day of month (1–31)                                      | Día del mes (1–31)                                           |
-| `h01`–`h24`      | Hourly value of pollutant (e.g., µg/m³ or mg/m³)         | Valor horario del contaminante (ej. µg/m³ o mg/m³)           |
-| `v01`–`v24`      | Validation code for each hour (see below)                | Código de validación por hora (ver abajo)                    |
+| Field            | Description                                      | 
+|------------------|----------------------------------------------------------|
+| `provincia`      | Province code (always 28 for Madrid)                     | 
+| `municipio`      | Municipality code (always 079 for Madrid city)           | 
+| `estacion`       | Station code (e.g., 004 = Plaza de España)               | 
+| `magnitud`       | Pollutant code (e.g., 08 = NO₂, 10 = PM10)               |
+| `punto_muestreo` | Sampling point ID: province + municipality + station + pollutant + technique | 
+| `ano`            | Year of measurement (4 digits)                           |
+| `mes`            | Month (1–12)                                             | 
+| `dia`            | Day of month (1–31)                                      |
+| `h01`–`h24`      | Hourly value of pollutant (e.g., µg/m³ or mg/m³)         |
+| `v01`–`v24`      | Validation code for each hour (see below)                |
 
 ## Validation Codes (`vXX`)
 
-| Code | English Meaning               | Significado en Español                  |
-|------|-------------------------------|------------------------------------------|
-| `V`  | Validated                     | Validado                                 |
-| `N`  | Not valid                     | No válido                                |
-| `P`  | Pending validation            | Pendiente de validación                  |
-| `F`  | Missing data                  | Falta de datos                           |
-| `S`  | Substituted (estimated)       | Sustituido por estimación                |
+| Code | Meaning               | 
+|------|-------------------------------|
+| `V`  | Validated                     | 
+| `N`  | Not valid                     | 
+| `P`  | Pending validation            | 
+| `F`  | Missing data                  | 
+| `S`  | Substituted (estimated)       | 
 
 ## Common Pollutant Codes (`magnitud`)
 
-| Code | Pollutant (EN)               | Contaminante (ES)             | Unit        |
+| Code | Pollutant                      | Unit        |
 |------|------------------------------|-------------------------------|-------------|
-| 01   | Sulfur Dioxide (SO₂)         | Dióxido de Azufre (SO₂)       | µg/m³       |
-| 06   | Carbon Monoxide (CO)         | Monóxido de Carbono (CO)      | mg/m³       |
-| 07   | Nitric Oxide (NO)            | Monóxido de Nitrógeno (NO)    | µg/m³       |
-| 08   | Nitrogen Dioxide (NO₂)       | Dióxido de Nitrógeno (NO₂)    | µg/m³       |
-| 09   | PM2.5                        | Partículas < 2.5 µm (PM2.5)    | µg/m³       |
-| 10   | PM10                         | Partículas < 10 µm (PM10)      | µg/m³       |
-| 12   | Nitrogen Oxides (NOx)        | Óxidos de Nitrógeno (NOx)     | µg/m³       |
-| 14   | Ozone (O₃)                   | Ozono (O₃)                     | µg/m³       |
-| 20   | Toluene                      | Tolueno                        | µg/m³       |
-| 30   | Benzene                      | Benceno                        | µg/m³       |
-| 42   | Total Hydrocarbons (Hexane) | Hidrocarburos totales (hexano)| mg/m³       |
-| 43   | Methane (CH₄)               | Metano (CH₄)                   | mg/m³       |
-| 44   | Non-methane Hydrocarbons    | Hidrocarburos no metánicos    | mg/m³       |
+| 01   | Sulfur Dioxide (SO₂)        | µg/m³       |
+| 06   | Carbon Monoxide (CO)         | mg/m³       |
+| 07   | Nitric Oxide (NO)            | µg/m³       |
+| 08   | Nitrogen Dioxide (NO₂)      | µg/m³       |
+| 09   | PM2.5                       | µg/m³       |
+| 10   | PM10                         | µg/m³       |
+| 12   | Nitrogen Oxides (NOx)        | µg/m³       |
+| 14   | Ozone (O₃)                  | µg/m³       |
+| 20   | Toluene                      | µg/m³       |
+| 30   | Benzene                     | µg/m³       |
+| 42   | Total Hydrocarbons (Hexane) | mg/m³       |
+| 43   | Methane (CH₄)             | mg/m³       |
+| 44   | Non-methane Hydrocarbons    | mg/m³       |
 
 </details>
 <hr>
 
 5. **District-Level Shapefiles – Geoportal Madrid**  
 [Dataset link](https://geoportal.madrid.es/IDEAM_WBGEOPORTAL/descargasDisponibles.iam?fileIdent=aebec21d-5cad-11f0-9f8c-9009dfd270e9)  
-Provides official district boundaries.  
-→ Essential for spatial joins and mapping emissions, heating demand, and retrofit scenarios by district.
+Provides official district boundaries.Essential for spatial joins and mapping emissions, heating demand, and retrofit scenarios by district.
 <hr>
 
 6. **Heating Technology Specs – Spain (IDAE, Eurostat, JRC, REE)**  
 `data/tech_specs/heating_technologies.csv`  
-Contains real-world cost, efficiency, and emissions data for four key heating technologies in Spain: air-source heat pumps, district heating, gas boilers, and biomass boilers.  
-→ Used for scenario modeling, cost-benefit analysis, and emissions gap closure simulations.  
+Contains real-world cost, efficiency, and emissions data for four key heating technologies in Spain: air-source heat pumps, district heating, gas boilers, and biomass boilers. Used for scenario modeling, cost-benefit analysis, and emissions gap closure simulations.  
 <img src="assets/heating_technologies_diagram.png" alt="specs" width="450"/>
 (done with python schemdraw>=0.15)
 
