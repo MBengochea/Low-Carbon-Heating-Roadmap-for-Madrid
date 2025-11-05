@@ -1,3 +1,9 @@
+[![Streamlit App](https://img.shields.io/badge/launch-streamlit-brightgreen?logo=streamlit)]
+(https://mbengochea-low-carbon-heating-roadmap-for-madrid-app-nahom1.streamlit.app/)
+
+[![Open in Binder](https://mybinder.org/badge_logo.svg)]
+(https://mybinder.org/v2/gh/YourUser/YourRepo/main?urlpath=lab/tree/notebooks)
+
 <table>
   <tr>
     <td><img src="assets/ayunta.madrid.png" alt="Madrid Logo" width="60"/></td>
@@ -10,10 +16,6 @@ General Objective:
 Develop a reproducible roadmap that prioritizes low‑carbon heating actions for Madrid using open data, SQL Pareto analysis, machine learning, and budget optimization to produce decision‑ready scenarios.
 
 Specific objectives: 1) Publish cleaned datasets and ingestion scripts. 2) Use Pareto SQL queries to identify top-impact areas. 3) Use ML to flag retrofit-ready buildings and report model performance. 4) Run budget-constrained optimizations to maximize emissions abatement across scenarios. 5) Ship an interactive Streamlit dashboard for stakeholders.
-
-## Streamlit App Here !
-
-(https://mbengochea-low-carbon-heating-roadmap-for-madrid-app-nahom1.streamlit.app/)
    
 ---
 
