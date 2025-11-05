@@ -140,7 +140,7 @@ If you're a Windows user type:
 uv pip install -r requirements.txt
 ```
 ---
-## **Data Sources (audit json's of cleanings in data/ingest_audit **
+## **Data Sources (audit json's of cleanings in data/ingest_audit)**
 
 1. **Greenhouse Gas Emissions Inventory – Comunidad de Madrid**  
 [Dataset link](https://datos.comunidad.madrid/dataset/atm_inventario_gei) Provides sectoral greenhouse gas emissions data across the region from 1990 onward. Useful for identifying high-emission zones and quantifying heating-related emissions for Pareto analysis.  
